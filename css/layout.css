@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+/* overlay nav */
+.overlay-nav-wrap {position:fixed;top:0;left:0;width:100%;max-width: 200px;height:100vh;background:#fff;transform: translateX(-100%);transition: transform .3s ease-in-out;z-index:100;}
+.overlay-nav-wrap.is-on {transform: translateX(0);transition: transform .1s ease-out;box-shadow:10px 10px 10px rgba(0,0,0,.3);}
+.overlay-nav-wrap .nav-head {position:relative;padding:10px 60px 10px 10px;border-bottom:1px dotted #ddd;background: #292982}
+.overlay-nav-wrap .nav-head > .title {font-size:20px;line-height:1;margin:0;color:#fff;}
+.overlay-nav-wrap .nav-head > button {position :absolute;top:50%;right:10px;transform: translateY(-50%)}
+.overlay-nav-wrap .nav-body {padding:10px 20px 10px 10px;height:calc(100vh - 40px);overflow:hidden;overflow-y:auto;}
+.overlay-nav-wrap .nav-body li + li {margin-top:10px;}
+
+.overlay-nav-open-btn,
+.overlay-nav-close-btn {background:transparent;border:0;padding:0;}
+.overlay-nav-open-btn .icon{width:24px;height:24px;}
+.overlay-nav-close-btn .icon{width:20px;height:20px;}

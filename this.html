@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('this의 개념');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.styles.index();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+
+
+<div class="wrap theme-dark">
+
+    <!-- OVERLAY NAV : START -->
+    <nav id="overlayNav" class="overlay-nav-wrap" data-overlay="gnbNav"></nav>
+    <!-- //OVERLAY NAV : END -->
+
+    <!-- HEADER : START -->
+    <header id="header" class="header"></header>
+    <!-- //HEADER : END -->
+
+    <!-- MAIN : START -->
+    <main class="main">
+        <div class="content pt50 pb50">
+            <section class="section">
+                <h2 class="title fc-orange">1. 일반 함수</h2>
+                <div class="flex-wrap">
+                    <div class="column n2 pr10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;함수&nbsp;표현식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;inHtmlFunction1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;함수&nbsp;표현식`,&nbsp;<span style="color:#4be6fa">this</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inHtmlFunction1();&nbsp;<span style="color:#999999">//&nbsp;window</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;함수&nbsp;선언식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;inHtmlFunction2(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;함수&nbsp;선언식&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inHtmlFunction2();&nbsp;<span style="color:#999999">//&nbsp;window</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;화살표&nbsp;함수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;inHtmlFunction3&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;()&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;화살표함수`,&nbsp;<span style="color:#4be6fa">this</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inHtmlFunction3();&nbsp;<span style="color:#999999">//&nbsp;window</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="column n2 pl10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 72px; left: 283px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;함수&nbsp;표현식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;inJsFunction1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;함수&nbsp;표현식&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inJsFunction1();&nbsp;<span style="color:#999999">//&nbsp;undefined</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;함수&nbsp;선언식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;inJsFunction2(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;함수&nbsp;선언식&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inJsFunction2();&nbsp;<span style="color:#999999">//&nbsp;undefined</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                            <dd>
+                                <span class="circle" style="top: 54px; left: 302px;"></span>
+                                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;화살표&nbsp;함수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;inJsFunction3&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;()&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;화살표&nbsp;함수&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">inJsFunction3();&nbsp;<span style="color:#999999">//&nbsp;window</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section mt50">
+                <h2 class="title fc-orange">2. 메소드 (함수 내부) 실행 : </h2>
+                <div class="flex-wrap">
+                    <div class="column n2 pr10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;메소드&nbsp;(함수&nbsp;내부)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;methodsFunction1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;testMethod&nbsp;:&nbsp;<span style="color:#ff3399">function</span>&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;메소드:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">methodsFunction1.testMethod();<span style="color:#999999">//&nbsp;{testMethod:&nbsp;ƒ}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="column n2 pl10">
+
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 72px; left: 283px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;메소드&nbsp;(함수&nbsp;내부)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;methodsFunction2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;testMethod&nbsp;:&nbsp;<span style="color:#ff3399">function</span>&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;메소드&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">methodsFunction2.testMethod();<span style="color:#999999">//&nbsp;{testMethod:&nbsp;ƒ}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section mt50">
+                <h2 class="title fc-orange">3. 생성자 실행 : new RegExp()</h2>
+                <div class="flex-wrap">
+                    <div class="column n2 pr10">
+                        <dl class="dl=list">
+                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//생성자&nbsp;함수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;ConstructorFunction1(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;생성자&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;constructorObj1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;ConstructorFunction1();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;ConstructorFunction1{}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="column n2 pl10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 72px; left: 283px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//생성자&nbsp;함수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;ConstructorFunction2(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;생성자&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;constructorObj2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;ConstructorFunction2();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;ConstructorFunction2{}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section mt50">
+                <h2 class="title fc-orange">4. 간접 실행 : .call(), apply() </h2>
+                <div class="flex-wrap">
+                    <div class="column n2 pr10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 54px; left: 302px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//간접&nbsp;실행</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;indirect1(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`HTML&nbsp;안에서&nbsp;간접&nbsp;실행&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;indirect1obj&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;{<span style="color:#4be6fa">name</span>:<span style="color:#ffd500">'My&nbsp;indirect1'</span>};</div><div style="padding:0 6px; white-space:pre; line-height:130%">indirect1.apply(indirect1obj)&nbsp;<span style="color:#999999">//&nbsp;{name:'My&nbsp;indirect1'}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">indirect1.call(indirect1obj)&nbsp;<span style="color:#999999">//&nbsp;{name:'My&nbsp;indirect1'}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="column n2 pl10">
+                        <dl class="dl-list">
+                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dd>
+                                <div class="position-box point mt10">
+                                    <span class="circle" style="top: 72px; left: 283px;"></span>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//간접&nbsp;실행</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;indirect2(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`.js&nbsp;안에서&nbsp;간접&nbsp;실행&nbsp;:&nbsp;`,&nbsp;<span style="color:#4be6fa">this</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;indirect2obj&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;{<span style="color:#4be6fa">name</span>:<span style="color:#ffd500">'My&nbsp;indirect2'</span>};</div><div style="padding:0 6px; white-space:pre; line-height:130%">indirect2.apply(indirect2obj)&nbsp;<span style="color:#999999">//&nbsp;{name:'My&nbsp;indirect2'}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">indirect2.call(indirect2obj)&nbsp;<span style="color:#999999">//&nbsp;{name:'My&nbsp;indirect2'}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <!-- MAIN : END -->
+
+    <!-- FOOTER : START -->
+    <footer id="footer" class="footer"></footer>
+    <!-- //FOOTER : END -->
+
+    <!-- SCROLL TOP : START -->
+    <div id="scrollTopMove"></div>
+    <!-- //SCROLL TOP : END -->
+
+</div>
+
+<script>
+    include.footer.scripts._this();
+
+
+// 함수 표현식
+var inHtmlFunction1 = function() {
+    console.log(`HTML 안에서 함수 표현식`, this)
+}
+inHtmlFunction1(); // window
+
+// 함수 선언식
+function inHtmlFunction2(){
+    console.log(`HTML 안에서 함수 선언식 : `, this);
+}
+inHtmlFunction2(); // window
+
+// 화살표 함수
+var inHtmlFunction3 = () => {
+    console.log(`HTML 안에서 화살표함수`, this)
+}
+inHtmlFunction3(); // window
+
+// 메소드 (함수 내부)
+const methodsFunction1 = {
+    testMethod : function () {
+        console.log(`HTML 안에서 메소드: `, this);
+    }
+}
+methodsFunction1.testMethod();// {testMethod: ƒ}
+
+//생성자 함수
+function ConstructorFunction1(){
+    console.log(`HTML 안에서 생성자 : `, this);
+}
+
+const constructorObj1 = new ConstructorFunction1();// ConstructorFunction1{}
+
+//간접 실행
+function indirect1(){
+    console.log(`HTML 안에서 간접 실행 : `, this);
+}
+const indirect1obj = {name:'My indirect1'};
+indirect1.apply(indirect1obj) // {name:'My indirect1'}
+indirect1.call(indirect1obj) // {name:'My indirect1'}
+</script>
+</body>
+</html>
