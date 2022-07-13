@@ -119,13 +119,13 @@ h3.sub-title {margin-bottom:10px;}
 .bg-white {background:#fff !important;}
 
 /* font-color */
-.fc-blue{color: #4eadff !important;}
-.fc-yellow{color: #ffdc00 !important;}
-.fc-red{color: #ff3f00 !important;}
-.fc-grey{color:#9A9A9A !important;}
-.fc-black{color: #303030 !important;}
-.fc-white{color:#fff !important;}
-.fc-orange {color: #ff6a00 !important;}
+.fc-blue{color: #4eadff !important}
+.fc-yellow{color: #ffdc00 !important}
+.fc-red{color: #ff3f00 !important}
+.fc-grey{color:#9A9A9A !important}
+.fc-black{color: #303030 !important}
+.fc-white{color:#fff !important}
+.fc-orange {color: #ff6a00 !important}
 
 /* font-size */
 .fs12 {font-size:12px !important}
@@ -190,6 +190,7 @@ h3.sub-title {margin-bottom:10px;}
 
 /* margin */
 .mt0 {margin-top:0 !important;}
+.mt5 {margin-top:5px !important;}
 .mt10 {margin-top:10px !important;}
 .mt20 {margin-top:20px !important;}
 .mt30 {margin-top:30px !important;}
@@ -197,6 +198,7 @@ h3.sub-title {margin-bottom:10px;}
 .mt50 {margin-top:50px !important;}
 
 .ml0 {margin-left:0 !important;}
+.ml5 {margin-left:5px !important;}
 .ml10 {margin-left:10px !important;}
 .ml20 {margin-left:20px !important;}
 .ml30 {margin-left:30px !important;}
@@ -204,6 +206,7 @@ h3.sub-title {margin-bottom:10px;}
 .ml50 {margin-left:50px !important;}
 
 .mr0 {margin-right:0 !important;}
+.mr5 {margin-right:5px !important;}
 .mr10 {margin-right:10px !important;}
 .mr20 {margin-right:20px !important;}
 .mr30 {margin-right:30px !important;}
@@ -211,6 +214,7 @@ h3.sub-title {margin-bottom:10px;}
 .mr50 {margin-right:50px !important;}
 
 .mb0 {margin-bottom:0 !important;}
+.mb5 {margin-bottom:5px !important;}
 .mb10 {margin-bottom:10px !important;}
 .mb20 {margin-bottom:20px !important;}
 .mb30 {margin-bottom:30px !important;}
@@ -250,10 +254,39 @@ h3.sub-title {margin-bottom:10px;}
 .icon {position:relative;display:inline-block;vertical-align:top;}
 .icon.icon-bugger-white {background:url('../images/icons/icon-bugger-white.png') center center/contain no-repeat}
 .icon.icon-cross-white {background:url('../images/icons/icon-cross-white.png') center center/contain no-repeat}
+.icon.icon-warring {background:url('../images/icons/icon-warring.png') center center/contain no-repeat}
 
 /* column layout */
 .flex-wrap {display:flex;justify-content: space-between}
 .flex-wrap .n2{width:50%;}
+
+/* box design */
+blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;line-height:1.4}
+
+.theme-dark blockquote.box-design {border:1px solid #333;background:#505050;color:#ddd;}
+
+/* table set */
+.table-wrap > table {table-layout: fixed;width:100%;border-top:1px solid #ddd}
+.table-wrap > table thead {position:sticky;top:0;z-index:2;}
+.table-wrap > table th {padding:20px 5px;border-bottom:1px solid #ddd;background:#ddd}
+.table-wrap > table td {padding:20px 5px;vertical-align: middle;border-bottom:1px solid #ddd;line-height:1.4;}
+.table-wrap .disabled > td {color:#666;background:#999;}
+.table-wrap .warning {position:relative;display:inline-block;padding:10px 10px 10px 15px;border-radius:5px;background: #ffd1d1;color:#000;font-size:14px;line-height:20px;}
+.table-wrap .warning:after {content:"";position:absolute;top:0;left:0;width:5px;height:100%;border-radius:5px 0 0 5px;background:#f70000;}
+.table-wrap .warning .icon {width:20px;height:20px;}
+.table-wrap .plus-desc {position:relative;display:inline-block;padding:10px 10px 10px 15px;border-radius:5px;background: #d1ffda;color:#000;font-size:14px;line-height:20px;}
+.table-wrap .plus-desc:after {content:"";position:absolute;top:0;left:0;width:5px;height:100%;border-radius:5px 0 0 5px;background: #00ad03;}
+
+.theme-dark .table-wrap > table,
+.theme-dark .table-wrap > table th ,
+.theme-dark .table-wrap > table td {border-color:#333;}
+.theme-dark .table-wrap > table th {background:#505050;}
+.theme-dark .table-wrap .disabled > td {color:#888;background:#777;}
+.theme-dark .table-wrap .disabled > td > span,
+.theme-dark .table-wrap .disabled > td > strong,
+.theme-dark .table-wrap .disabled > td > em,
+.theme-dark .table-wrap .disabled > td > p {color:inherit;}
+
 
 /* animation */
 @-webkit-keyframes fadeIn {
