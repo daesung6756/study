@@ -13,26 +13,18 @@
 </head>
 <body>
 
-
 <div class="wrap theme-dark">
-
-    <!-- OVERLAY NAV : START -->
-    <nav id="overlayNav" class="overlay-nav-wrap" data-overlay="gnbNav"></nav>
-    <!-- //OVERLAY NAV : END -->
-
-    <!-- HEADER : START -->
-    <header id="header" class="header"></header>
-    <!-- //HEADER : END -->
-
-    <!-- MAIN : START -->
-    <main class="main">
-        <div class="content pt50 pb50">
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+            <h2 class="title fc-orange">this의 개념</h2>
+            <p class="desc">대부분의 경우 this의 값은 함수를 호출한 방법에 의해 결정됩니다. <br>실행중에는 할당으로 설정할 수 없고 함수를 호출할 때 마다 다를 수 있습니다. <br>ES5는 함수를 어떻게 호출했는지 상관하지 않고 this 값을 설정할 수 있는 bind 메서드를 도입했고, ES2015는 스스로의 this 바인딩을 제공하지 않는 화살표 함수를 추가했습니다 (이는 렉시컬 컨텍스트안의 this값을 유지합니다).<br><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this">[출처 : mdn web docs]</a></p>
             <section class="section">
-                <h2 class="title fc-orange">1. 일반 함수</h2>
+                <h3 class="title fc-blue mb10">1. 일반 함수</h3>
                 <div class="flex-wrap">
                     <div class="column n2 pr10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">HTML 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 54px; left: 302px;"></span>
@@ -55,7 +47,7 @@
                     </div>
                     <div class="column n2 pl10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">.js 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 72px; left: 283px;"></span>
@@ -78,11 +70,11 @@
             </section>
 
             <section class="section mt50">
-                <h2 class="title fc-orange">2. 메소드 (함수 내부) 실행 : </h2>
+                <h3 class="title fc-blue mb10">2. 메소드 (함수 내부) 실행 : </h3>
                 <div class="flex-wrap">
                     <div class="column n2 pr10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">HTML 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 54px; left: 302px;"></span>
@@ -94,7 +86,7 @@
                     <div class="column n2 pl10">
 
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">.js 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 72px; left: 283px;"></span>
@@ -107,11 +99,11 @@
             </section>
 
             <section class="section mt50">
-                <h2 class="title fc-orange">3. 생성자 실행 : new RegExp()</h2>
+                <h3 class="title fc-blue mb10">3. 생성자 실행 : new RegExp()</h3>
                 <div class="flex-wrap">
                     <div class="column n2 pr10">
                         <dl class="dl=list">
-                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">HTML 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 54px; left: 302px;"></span>
@@ -122,7 +114,7 @@
                     </div>
                     <div class="column n2 pl10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">.js 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 72px; left: 283px;"></span>
@@ -135,11 +127,11 @@
             </section>
 
             <section class="section mt50">
-                <h2 class="title fc-orange">4. 간접 실행 : .call(), apply() </h2>
+                <h3 class="title fc-blue mb10">4. 간접 실행 : .call(), apply() </h3>
                 <div class="flex-wrap">
                     <div class="column n2 pr10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">HTML 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">HTML 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 54px; left: 302px;"></span>
@@ -150,7 +142,7 @@
                     </div>
                     <div class="column n2 pl10">
                         <dl class="dl-list">
-                            <dt><h3 class="title mb20">.js 파일 선언 실행</h3></dt>
+                            <dt><strong class="title mb20">.js 파일 선언 실행</strong></dt>
                             <dd>
                                 <div class="position-box point mt10">
                                     <span class="circle" style="top: 72px; left: 283px;"></span>
@@ -163,63 +155,53 @@
             </section>
 
         </div>
-    </main>
-    <!-- MAIN : END -->
-
-    <!-- FOOTER : START -->
-    <footer id="footer" class="footer"></footer>
-    <!-- //FOOTER : END -->
-
-    <!-- SCROLL TOP : START -->
-    <div id="scrollTopMove"></div>
-    <!-- //SCROLL TOP : END -->
-
+        </main>
+    </div>
 </div>
 
 <script>
     include.footer.scripts._this();
 
-
-// 함수 표현식
-var inHtmlFunction1 = function() {
-    console.log(`HTML 안에서 함수 표현식`, this)
-}
-inHtmlFunction1(); // window
-
-// 함수 선언식
-function inHtmlFunction2(){
-    console.log(`HTML 안에서 함수 선언식 : `, this);
-}
-inHtmlFunction2(); // window
-
-// 화살표 함수
-var inHtmlFunction3 = () => {
-    console.log(`HTML 안에서 화살표함수`, this)
-}
-inHtmlFunction3(); // window
-
-// 메소드 (함수 내부)
-const methodsFunction1 = {
-    testMethod : function () {
-        console.log(`HTML 안에서 메소드: `, this);
+    // 함수 표현식
+    var inHtmlFunction1 = function() {
+        console.log(`HTML 안에서 함수 표현식`, this)
     }
-}
-methodsFunction1.testMethod();// {testMethod: ƒ}
+    inHtmlFunction1(); // window
 
-//생성자 함수
-function ConstructorFunction1(){
-    console.log(`HTML 안에서 생성자 : `, this);
-}
+    // 함수 선언식
+    function inHtmlFunction2(){
+        console.log(`HTML 안에서 함수 선언식 : `, this);
+    }
+    inHtmlFunction2(); // window
 
-const constructorObj1 = new ConstructorFunction1();// ConstructorFunction1{}
+    // 화살표 함수
+    var inHtmlFunction3 = () => {
+        console.log(`HTML 안에서 화살표함수`, this)
+    }
+    inHtmlFunction3(); // window
 
-//간접 실행
-function indirect1(){
-    console.log(`HTML 안에서 간접 실행 : `, this);
-}
-const indirect1obj = {name:'My indirect1'};
-indirect1.apply(indirect1obj) // {name:'My indirect1'}
-indirect1.call(indirect1obj) // {name:'My indirect1'}
+    // 메소드 (함수 내부)
+    const methodsFunction1 = {
+        testMethod : function () {
+            console.log(`HTML 안에서 메소드: `, this);
+        }
+    }
+    methodsFunction1.testMethod();// {testMethod: ƒ}
+
+    //생성자 함수
+    function ConstructorFunction1(){
+        console.log(`HTML 안에서 생성자 : `, this);
+    }
+
+    const constructorObj1 = new ConstructorFunction1();// ConstructorFunction1{}
+
+    //간접 실행
+    function indirect1(){
+        console.log(`HTML 안에서 간접 실행 : `, this);
+    }
+    const indirect1obj = {name:'My indirect1'};
+    indirect1.apply(indirect1obj) // {name:'My indirect1'}
+    indirect1.call(indirect1obj) // {name:'My indirect1'}
 </script>
 </body>
 </html>

@@ -1,16 +1,18 @@
 'use strict'
 
 function defaultRender() {
-    const overlayNav = document.getElementById('overlayNav');
-    const header = document.getElementById('header');
-    const footer = document.getElementById('footer');
-    const scrollTopMove = document.getElementById('scrollTopMove');
-
-    overlayNav.innerHTML = include.html.overlayNav();
-    header.innerHTML = include.html.header();
-    footer.innerHTML = include.html.footer();
-    scrollTopMove.innerHTML = include.html.scrollTopMove();
+    const wrap = document.querySelector('.wrap');
+    const main = document.querySelector('#app');
+    const render = {
+        overlayNav: include.html.overlayNav(),
+        header: include.html.header(),
+        main: '<!-- MAIN : START -->' + main.innerHTML + '<!-- MAIN : END -->',
+        footer: include.html.footer(),
+        scrollTopMove: include.html.scrollTopMove()
+    }
+    wrap.innerHTML = render.overlayNav + render.header + render.main + render.footer + render.scrollTopMove;
 }
+
 
 document.addEventListener("DOMContentLoaded", function(){
     defaultRender();
@@ -20,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(){
         body : document.body,
         overlayNavElements : document.querySelectorAll('[data-overlay]'),
         overlayNavGroup: [],
+        isOpenEvent: null,
+        isDimmed: false,
+        scrollTopElement:'',
         init: function() {
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay : none');
         },
@@ -33,12 +38,28 @@ document.addEventListener("DOMContentLoaded", function(){
                 open.addEventListener('click', () => {
                     this.activate('[data-overlay=' + value +']', 'is-on');
                     this.addDimmed();
+                    this.isOpenEvent = '[data-overlay=' + value + ']';
+                    this.dimmedCloseEvent();
                 });
                 close.addEventListener('click',() => {
                     this.inActivate('[data-overlay=' + value +']', 'is-on')
                     this.removeDimmed();
+                    this.isOpenEvent = null;
                 });
             })
+        },
+        dimmedCloseEvent : function() {
+            const dimmed = document.querySelector('.dimmed');
+            const currentEvent = document.querySelector(this.isOpenEvent)
+            dimmed.addEventListener('click', () => {
+                if(this.isOpenEvent){
+                    if(currentEvent.classList.contains('is-on')){
+                        currentEvent.classList.remove('is-on');
+                        this.removeDimmed();
+                        this.isOpenEvent = null;
+                    }
+                }
+            });
         },
         activate: function ( data , className ) {
             const targetEl = document.querySelector(data);
@@ -52,11 +73,15 @@ document.addEventListener("DOMContentLoaded", function(){
         },
         addDimmed : function (){
             const div = document.createElement('div');
+            this.body.classList.add('is-fixed');
             div.classList.add('dimmed');
             this.body.append(div);
+            this.isDimmed = true;
         },
         removeDimmed : function () {
+            this.body.classList.remove('is-fixed');
             this.body.querySelector('.dimmed').remove();
+            this.isDimmed = false;
         }
     }
 
