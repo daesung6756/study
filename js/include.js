@@ -7,15 +7,13 @@ const include = {
         },
         meta :function () {
             document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+            document.write('<meta name="Author" content="daesung lee">');
         },
         styles : {
             common : function () {
                 document.write('<link rel="stylesheet" href="css/reset.css">');
                 document.write('<link rel="stylesheet" href="css/common.css">');
                 document.write('<link rel="stylesheet" href="css/layout.css">');
-            },
-            index : function () {
-                document.write('<link rel="stylesheet" href="css/index.css">');
             },
         },
         scripts : {
@@ -46,6 +44,7 @@ const include = {
                 + '<ul class="nav-body">'
                 + '<li><a href="index.html">바닐라 자바스크립란?</a></li>'
                 + '<li><a href="this.html">this의 개념</a></li>'
+                + '<li><a href="function.html">자바스크립트 함수의 종류 및 정의</a></li>'
                 + '<li><a href="built-in-function.html">자바스크림트 내장 함수</a></li>'
                 + '</ul>'
                 + '</div>'
@@ -84,8 +83,8 @@ const include = {
         scrollTopMove : function () {
             var render =
                 '<!-- SCROLL TOP : START -->'
-                + '<div id="scrollTopMove" class="scroll-top-wrap">'
-                + '<button type="button" class="scroll-top"></button>'
+                + '<div class="scroll-top-wrap">'
+                + '<button type="button" id="scrollTopBtn" class="scroll-top"><i class="icon icon-circle-up-arrow-green"><span class="blind">위로 이동</span></i></button>'
                 + '</div>'
                 + '<!--//SCROLL TOP : END -->';
             return render;

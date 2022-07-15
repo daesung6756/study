@@ -13,13 +13,14 @@ function defaultRender() {
     wrap.innerHTML = render.overlayNav + render.header + render.main + render.footer + render.scrollTopMove;
 }
 
-
 document.addEventListener("DOMContentLoaded", function(){
     defaultRender();
 
     //overlay nav
     const UI = {
+        html : document.querySelector('html'),
         body : document.body,
+        header : document.querySelector('#header'),
         overlayNavElements : document.querySelectorAll('[data-overlay]'),
         overlayNavGroup: [],
         isOpenEvent: null,
@@ -27,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
         scrollTopElement:'',
         init: function() {
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay : none');
+            this.scrollTopView();
+            this.scrollTopClickEvent();
         },
         overlayNav : function () {
             for(let [index , value ] of this.overlayNavElements.entries()){
@@ -46,6 +49,16 @@ document.addEventListener("DOMContentLoaded", function(){
                     this.removeDimmed();
                     this.isOpenEvent = null;
                 });
+            })
+        },
+        scrollTopView: function (){
+            const scrollWrap = document.querySelector('.scroll-top-wrap');
+            this.html.scrollTop > this.header.clientHeight ? scrollWrap.classList.add('is-on') : scrollWrap.classList.remove('is-on');
+        },
+        scrollTopClickEvent : function () {
+            const button = document.querySelector('#scrollTopBtn');
+            button.addEventListener('click', function(){
+                window.scrollTo({top: 0, behavior: 'smooth'})
             })
         },
         dimmedCloseEvent : function() {
@@ -86,13 +99,16 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     UI.init();
+
+    document.addEventListener('scroll', function(){
+        UI.scrollTopView();
+    })
 });
 
 
 window.addEventListener('load', function () {
-
-
 })
+
 
 
 

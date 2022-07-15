@@ -51,7 +51,6 @@ h6.tit .tit-desc {font-size:12px;}
 h2 {font-size:20px;font-weight:bold;line-height:1.4}
 h2.title {position:relative;color: #197759;margin-bottom:20px;}
 h2.sub-title {text-align:center;padding:10px 0;border-top:1px dashed #ddd;}
-h2.title + .desc {margin-bottom:20px;font-size:14px;color:#aaa;}
 h3 {font-size:16px;font-weight:bold;line-height:1.4;}
 h3.sub-title {margin-bottom:10px;}
 h3.title-desc {margin-bottom:10px;}
@@ -60,6 +59,7 @@ h3.title-desc {margin-bottom:10px;}
 .title.rect-type:after {content:'';position:absolute;left:2px;top:11px;width:5px;height:5px;background:#000;}
 .title.circle-type {padding-left:12px;}
 .title.circle-type:after {content:'';position:absolute;left:2px;top:13px;width:4px;height:4px;background:#000;border-radius:50%;}
+.title + .desc {margin-bottom:20px;font-size:14px;color:#aaa;}
 
 /* list */
 .d-list li,
@@ -218,6 +218,7 @@ h3.title-desc {margin-bottom:10px;}
 .icon.icon-cross-white {background:url('../images/icons/icon-cross-white.png') center center/contain no-repeat}
 .icon.icon-warring-red {background:url('../images/icons/icon-warring-red.png') center center/contain no-repeat}
 .icon.icon-reply-blue {background:url('../images/icons/icon-reply-blue.png') center center/contain no-repeat}
+.icon.icon-circle-up-arrow-green {background:url('../images/icons/icon-circle-up-arrow-green.png') center center/contain no-repeat}
 
 /* animation */
 @-webkit-keyframes fadeIn {
