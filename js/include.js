@@ -46,6 +46,7 @@ const include = {
                 + '<li><a href="this.html">this의 개념</a></li>'
                 + '<li><a href="function.html">자바스크립트 함수의 종류 및 정의</a></li>'
                 + '<li><a href="built-in-function.html">자바스크림트 내장 함수</a></li>'
+                + '<li><a href="array-prototype.html">Array (배열)</a></li>'
                 + '</ul>'
                 + '</div>'
                 + '</nav>'

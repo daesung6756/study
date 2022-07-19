@@ -67,7 +67,32 @@ h3.title-desc {margin-bottom:10px;}
 .c-list li + li,
 .d-list li + li {margin-top:5px;}
 .d-list li:before{content:'';position:absolute;top:10px;left:2px;width:4px;height:1px;background:#000;}
-.c-list li:before{content:'';position:absolute;top:12px;left:2px;width:3px;height:3px;background:#000;border-radius:50%}
+.c-list li:before{content:'';position:absolute;top:50%;transform:translateY(-50%);left:2px;width:3px;height:3px;background:#000;border-radius:50%}
+
+.desc-list dt {position:relative;font-size:.9rem;padding:0 30px 0 0;}
+.desc-list dd {font-size:.7rem;}
+.desc-list dt + dd ,
+.desc-list dd + dd {margin-top:10px;}
+.desc-list dd + dt {margin-top:30px;}
+.desc-list dt + dd {border-top:1px dotted #555;border-bottom:1px dotted #555;}
+.desc-list .box {height:0;overflow: hidden;padding:0;}
+.desc-list .box.is-show {height:auto;padding:10px;background:#444c3a}
+.desc-list .toggle-btn {position:absolute;top:50%;right:0;width:20px;height:20px;transform:translateY(-50%);background: transparent;font-size:0;border:0;}
+.desc-list .toggle-btn::before,
+.desc-list .toggle-btn::after {content:'';position:absolute;top:50%;left:50%;width:5px;height:100%;transition: transform .2s ease-in-out, background .2s ease-in-ou;background:#fff;border-radius: 2px;}
+.desc-list .toggle-btn::before {transform: translate(-50%, -50%) rotate(90deg);}
+.desc-list .toggle-btn::after {transform: translate(-50%, -50%) rotate(0deg);}
+.desc-list .toggle-btn.is-on::before,
+.desc-list .toggle-btn.is-on::after {transition: transform .2s ease-in-out, background .2s ease-in-out}
+.desc-list .toggle-btn.is-on::before {transform: translate(-50%, -50%) rotate(45deg);background:#7bd700}
+.desc-list .toggle-btn.is-on::after {transform: translate(-50%, -50%) rotate(-45deg);background:#7bd700}
+.desc-list .icon-required-green,
+.desc-list .icon-checked-green {width:24px;height:24px;margin-right:10px;}
+.desc-list .colorscripter-code {margin-top:20px;}
+.desc-list .colorscripter-code > table {width:100%;}
+
+.theme-dark .d-list li:before,
+.theme-dark .c-list li:before {background:#fff;}
 
 .editer-wrap {background:#404040;padding:20px;color:#efefef;font-weight:100;}
 .editer-wrap ul li {line-height:1.4;font-size:12px;word-break:break-all}
@@ -219,8 +244,36 @@ h3.title-desc {margin-bottom:10px;}
 .icon.icon-warring-red {background:url('../images/icons/icon-warring-red.png') center center/contain no-repeat}
 .icon.icon-reply-blue {background:url('../images/icons/icon-reply-blue.png') center center/contain no-repeat}
 .icon.icon-circle-up-arrow-green {background:url('../images/icons/icon-circle-up-arrow-green.png') center center/contain no-repeat}
+.icon.icon-required-green {background:url('../images/icons/icon-required-green.png') center center/contain no-repeat}
+.icon.icon-checked-green {background:url('../images/icons/icon-checked-green.png') center center/contain no-repeat}
+
+
+
+/* code */
+.colorscripter-code {font-size:.7rem;}
 
 /* animation */
+
+@-webkit-keyframes sliding {
+    0% {transform: translateY(-100%)}
+    100% {transform: translateY(0)}
+}
+@keyframes sliding {
+    0% {transform: translateY(-100%)}
+    100% {transform: translateY(0)}
+}
+
+@-webkit-keyframes callBell{
+    0% ,4%, 12%, 20% {transform: rotate(5deg)}
+    2%,8%, 16%, 24% {transform: rotate(-5deg)}
+    37% {transform: rotate(0)}
+}
+
+@keyframes callBell {
+    0% ,4%, 12%, 20% {transform: rotate(5deg)}
+    2%,8%, 16%, 24%{transform: rotate(-5deg)}
+    37% {transform: rotate(0)}
+}
 @-webkit-keyframes fadeIn {
     0%{opacity:0;visibility:hidden}
     100%{opacity:1;visibility:visible}

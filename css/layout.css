@@ -10,7 +10,7 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .theme-dark blockquote.box-design {border:1px solid #333;background:#505050;color:#ddd;}
 
 /* overlay nav */
-.overlay-nav-wrap {position:fixed;top:0;left:0;width:100%;max-width: 300px;height:100vh;background:#323232;transform: translateX(-100%);transition: transform .3s ease-in-out;z-index:100;}
+.overlay-nav-wrap {position:fixed;top:0;left:0;width:100%;max-width: 300px;height:100vh;background:#323232;transform: translateX(-100%);transition: transform .3s ease-in-out;z-index:100;font-size:.8rem}
 .overlay-nav-wrap.is-on {transform: translateX(0);transition: transform .1s ease-out;box-shadow:10px 10px 10px rgba(0,0,0,.3);}
 .overlay-nav-wrap .nav-head {position:relative;padding:16px 60px 16px 10px;background: #ff522b}
 .overlay-nav-wrap .nav-head > .title {font-size:20px;line-height:1;margin:0;color:#fff;}
@@ -20,7 +20,9 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .overlay-nav-wrap .nav-body li + li {margin-top:10px;}
 
 .overlay-nav-open-btn,
-.overlay-nav-close-btn {background:transparent;border:0;padding:0;}
+.overlay-nav-close-btn {position:relative;background:transparent;border:0;padding:0;}
+.overlay-nav-open-btn:before {content:'백틱 토글';position:absolute;top:0;min-width:30px;left:100%;margin-left:16px;padding:8px;background: #ff522b;color:#fff;line-height:1.1;border-radius:10px;animation: callBell 1s ease-in-out infinite;}
+.overlay-nav-open-btn:after {content:'';position:absolute;top:10px;left:100%;width:0;height:0;margin-left:6px;border-top: 5px solid transparent;border-right: 10px solid #ff522b;border-bottom: 5px solid transparent}
 .overlay-nav-open-btn .icon{width:24px;height:24px;}
 .overlay-nav-close-btn .icon{width:20px;height:20px;}
 
@@ -34,7 +36,7 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .plus-desc:after {background: #00ad03;}
 
 /* table set */
-.table-wrap > table {table-layout: fixed;width:100%;border-top:1px solid #ddd}
+.table-wrap > table {table-layout: fixed;width:100%;border-top:1px solid #ddd;font-size:.7rem;}
 .table-wrap > table thead {position:sticky;top:0;z-index:2;}
 .table-wrap > table th {padding:20px 5px;border-bottom:1px solid #ddd;background:#ddd}
 .table-wrap > table td {padding:20px 5px;vertical-align: middle;border-bottom:1px solid #ddd;line-height:1.4;}
@@ -49,6 +51,11 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .theme-dark .table-wrap .disabled > td > strong,
 .theme-dark .table-wrap .disabled > td > em,
 .theme-dark .table-wrap .disabled > td > p {color:inherit;}
+
+
+/* scroll wrap */
+.scroll-x-wrap {overflow:hidden;overflow-x: auto;}
+.scroll-x-wrap > table {min-width:1024px;}
 
 .scroll-top-wrap {position:fixed;bottom:100px;right:20px;text-align:right;z-index:-1;opacity:0;transition: opacity .3s linear}
 .scroll-top-wrap.is-on {opacity:1;transition: opacity .3s linear;z-index:10;}
