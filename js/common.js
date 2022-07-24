@@ -1,20 +1,6 @@
 'use strict'
 
-function defaultRender() {
-    const wrap = document.querySelector('.wrap');
-    const main = document.querySelector('#app');
-    const render = {
-        overlayNav: include.html.overlayNav(),
-        header: include.html.header(),
-        main: '<!-- MAIN : START -->' + main.innerHTML + '<!-- MAIN : END -->',
-        footer: include.html.footer(),
-        scrollTopMove: include.html.scrollTopMove()
-    }
-    wrap.innerHTML = render.overlayNav + render.header + render.main + render.footer + render.scrollTopMove;
-}
-
 document.addEventListener("DOMContentLoaded", function(){
-    defaultRender();
 
     //overlay nav
     const UI = {
@@ -31,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function(){
         isDimmed: false,
         scrollTopElement:'',
         init: function() {
+            this.loader(),
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : 0');
             this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : 0');
             this.scrollTopView();
             this.scrollTopClickEvent();
+        },
+        loader : function() {
+
         },
         overlayNav : function () {
             for(let [index , value ] of this.overlayNavElements.entries()){

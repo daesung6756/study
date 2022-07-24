@@ -32,6 +32,15 @@ const include = {
         }
     },
     html : {
+        loader : function () {
+            var render =
+                '<!-- LOADER : START -->'
+                + '<div class="loading-bar">'
+
+                + '</div>'
+                +  '<!--//LOADER : END -->'
+            return render;
+        },
         overlayNav : function () {
             var render =
                 '<!-- OVERLAY NAV : START -->'
@@ -81,6 +90,15 @@ const include = {
                 + '<!--//FOOTER : END -->';
             return render;
         },
+        consolelogGuide : function() {
+            var render =
+                '<!-- CONSOLE GUIDE : START -->'
+                + '<div class="console-guide">'
+                + ''
+                + '</div>'
+                + '<!--//CONSOLE GUIDE : END -->';
+            return render;
+        },
         scrollTopMove : function () {
             var render =
                 '<!-- SCROLL TOP : START -->'
@@ -92,5 +110,33 @@ const include = {
         }
     }
 }
+
+function defaultRender() {
+    const wrap = document.querySelector('.wrap');
+    const main = document.querySelector('#app');
+    const render = {
+        loader : include.html.loader(),
+        overlayNav: include.html.overlayNav(),
+        header: include.html.header(),
+        main: '<!-- MAIN : START -->' + main.innerHTML + '<!-- MAIN : END -->',
+        footer: include.html.footer(),
+        scrollTopMove: include.html.scrollTopMove(),
+        consoleGuide : include.html.consolelogGuide()
+    }
+    wrap.innerHTML =
+        render.loader +
+        render.overlayNav +
+        render.header +
+        render.main +
+        render.footer +
+        render.scrollTopMove +
+        render.consoleGuide;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log('render : START')
+    defaultRender();
+    console.log('render : END')
+});
 
 
