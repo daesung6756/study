@@ -7,24 +7,32 @@ document.addEventListener("DOMContentLoaded", function(){
         backtick : 192,
         html : document.querySelector('html'),
         body : document.body,
+        loader : document.querySelector('#loader'),
         header : document.querySelector('#header'),
         overlayNavElements : document.querySelectorAll('[data-overlay]'),
-        overlayNavGroup: [],
+        popupElements : document.querySelectorAll('[data-popup]'),
         toggleBoxElements : document.querySelectorAll('[data-toggle]'),
+        overlayNavGroup: [],
+        popupGroup : [],
         toggleBoxGroup: [],
         toggleBoxOpenGroup: [],
         isOpenEvent: null,
         isDimmed: false,
         scrollTopElement:'',
         init: function() {
-            this.loader(),
+            this.loaderClear();
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : 0');
+            this.popupElements.length > 0 ? this.popups() : console.log('data-popup length : 0');
             this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : 0');
             this.scrollTopView();
             this.scrollTopClickEvent();
         },
-        loader : function() {
-
+        loaderClear : function() {
+            window.addEventListener('load', function () {
+                setTimeout(function() {
+                    this.loader.remove();
+                }, 400)
+            })
         },
         overlayNav : function () {
             for(let [index , value ] of this.overlayNavElements.entries()){
@@ -34,19 +42,32 @@ document.addEventListener("DOMContentLoaded", function(){
                 const open = document.querySelector('[data-overlay-open=' + value +']');
                 const close = document.querySelector('[data-overlay-close=' + value +']');
 
-                open.addEventListener('click', () => this.overlayNavOpen( value ));
-                close.addEventListener('click',() => this.overlayNavClose( value ));
+                open.addEventListener('click', () => this.useDimmedOpen( value,  'overlay', 'is-on' ));
+                close.addEventListener('click',() => this.useDimmedClose( value , 'overlay', 'is-on' ));
 
                 document.addEventListener('keydown', e => {
                     if(e.keyCode === this.backtick) {
                         if (this.isOpenEvent === null) {
-                            this.overlayNavOpen( value )
+                            this.useDimmedOpen( value,  'overlay', 'is-on' );
                         } else {
-                            this.overlayNavClose( value )
+                            this.useDimmedClose( value , 'overlay', 'is-on' );
                         }
                     }
                 });
             })
+        },
+        popups : function () {
+            for(let [index , value ] of this.popupElements.entries()){
+                this.popupGroup.push(value.dataset.popup);
+            };
+
+            this.popupGroup.map( value => {
+                const open = document.querySelector('[data-popup-open=' + value + ']');
+                const close = document.querySelector('[data-popup-close=' + value + ']');
+
+                open.addEventListener('click', () => this.useDimmedOpen( value ,'popup', 'is-on'));
+                close.addEventListener('click', () => this.useDimmedClose( value ,'popup', 'is-on'));
+            });
         },
         toggleBox : function () {
             for(let [index , value ] of this.toggleBoxElements.entries()){
@@ -62,17 +83,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 });
 
             });
-        },
-        overlayNavOpen : function ( value ) {
-            this.activate('[data-overlay=' + value + ']', 'is-on');
-            this.addDimmed();
-            this.isOpenEvent = '[data-overlay=' + value + ']';
-            this.dimmedCloseEvent();
-        },
-        overlayNavClose : function ( value ) {
-            this.inActivate('[data-overlay=' + value + ']', 'is-on')
-            this.removeDimmed();
-            this.isOpenEvent = null;
         },
         scrollTopView: function (){
             const scrollWrap = document.querySelector('.scroll-top-wrap');
@@ -96,6 +106,17 @@ document.addEventListener("DOMContentLoaded", function(){
                     }
                 }
             });
+        },
+        useDimmedOpen : function ( value , dataName, className ) {
+            this.activate('[data-' + dataName + '=' + value + ']',  className );
+            this.addDimmed();
+            this.isOpenEvent = '[data-' + dataName + '=' + value + ']';
+            this.dimmedCloseEvent();
+        },
+        useDimmedClose : function ( value , dataName, className ) {
+            this.inActivate('[data-' + dataName + '=' + value + ']',  className );
+            this.removeDimmed();
+            this.isOpenEvent = null;
         },
         activate: function ( data , className ) {
             const targetEl = document.querySelector(data);
@@ -131,9 +152,10 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-
 window.addEventListener('load', function () {
-})
+    console.log('window load : END')
+});
+
 
 
 

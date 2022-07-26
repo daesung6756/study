@@ -9,6 +9,10 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 
 .theme-dark blockquote.box-design {border:1px solid #333;background:#505050;color:#ddd;}
 
+/* loading-bar */
+.loading-bar {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:flex;align-items: center;justify-content: center;z-index:100;}
+.loading-bar > svg {width:60px;height:60px;}
+
 /* overlay nav */
 .overlay-nav-wrap {position:fixed;top:0;left:0;width:100%;max-width: 300px;height:100vh;background:#323232;transform: translateX(-100%);transition: transform .3s ease-in-out;z-index:100;font-size:.8rem}
 .overlay-nav-wrap.is-on {transform: translateX(0);transition: transform .1s ease-out;box-shadow:10px 10px 10px rgba(0,0,0,.3);}
@@ -25,6 +29,10 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .overlay-nav-open-btn:after {content:'';position:absolute;top:10px;left:100%;width:0;height:0;margin-left:6px;border-top: 5px solid transparent;border-right: 10px solid #ff522b;border-bottom: 5px solid transparent}
 .overlay-nav-open-btn .icon{width:24px;height:24px;}
 .overlay-nav-close-btn .icon{width:20px;height:20px;}
+
+/* popup */
+.popup-wrap {display:none;position:fixed;top:0;left:0;width:100%;height:100%;align-items: center;justify-content: center;z-index:99;}
+.popup-wrap.is-on {ddisplay:flex;}
 
 /* boxs */
 .reply-box {position:relative;display:inline-block;padding:10px 10px 10px 15px;border-radius:5px;font-size:14px;line-height:20px;color:#000;background: #bee0ff;}
@@ -52,12 +60,15 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .theme-dark .table-wrap .disabled > td > em,
 .theme-dark .table-wrap .disabled > td > p {color:inherit;}
 
-
 /* scroll wrap */
 .scroll-x-wrap {overflow:hidden;overflow-x: auto;}
 .scroll-x-wrap > table {min-width:1024px;}
 
-.scroll-top-wrap {position:fixed;bottom:100px;right:20px;text-align:right;z-index:-1;opacity:0;transition: opacity .3s linear}
+.scroll-top-wrap {position:fixed;bottom:100px;left:50%;transform: translateX(-50%);z-index:-1;opacity:0;transition: opacity .3s linear}
 .scroll-top-wrap.is-on {opacity:1;transition: opacity .3s linear;z-index:10;}
-.scroll-top-wrap > button {background: transparent;border:0;font-size:0;}
-.scroll-top-wrap > button >.icon {width:50px;height:50px;}
+.scroll-top-wrap > button {background: transparent;border:0;font-size:.7rem;line-height:18px;font-weight:800}
+.scroll-top-wrap > button >.icon {width:18px;height:18px;margin-left:5px;}
+
+/* console-guide */
+.console-guide {position:fixed;right:10px;top:50%;transform: translateY(-50%);font-size:0;}
+.console-guide .icon {width:25px;background-color:#fff;}

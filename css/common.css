@@ -17,9 +17,9 @@ html, body {min-width:320px;line-height:1.4}
 
 /* scroll bar */
 /* width */
-::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar {width:3px;}
 /* Track */
-::-webkit-scrollbar-track {background: #f1f1f1;}
+::-webkit-scrollbar-track {background: #272727;}
 /* Handle */
 ::-webkit-scrollbar-thumb {background: #888;}
 /* Handle on hover */
@@ -77,17 +77,18 @@ h3.title-desc {margin-bottom:10px;}
 .desc-list dt + dd {border-top:1px dotted #555;border-bottom:1px dotted #555;}
 .desc-list .box {height:0;overflow: hidden;padding:0;}
 .desc-list .box.is-show {height:auto;padding:10px;background:#444c3a}
+.desc-list .link-set {color:#fff;}
+.desc-list .link-set > strong {}
 .desc-list .toggle-btn {position:absolute;top:50%;right:0;width:20px;height:20px;transform:translateY(-50%);background: transparent;font-size:0;border:0;}
 .desc-list .toggle-btn::before,
-.desc-list .toggle-btn::after {content:'';position:absolute;top:50%;left:50%;width:5px;height:100%;transition: transform .2s ease-in-out, background .2s ease-in-ou;background:#fff;border-radius: 2px;}
+.desc-list .toggle-btn::after {content:'';position:absolute;top:50%;left:50%;width:5px;height:100%;transition: transform .2s ease-in-out, background .2s ease-in-out;background:#fff;border-radius: 2px;}
 .desc-list .toggle-btn::before {transform: translate(-50%, -50%) rotate(90deg);}
 .desc-list .toggle-btn::after {transform: translate(-50%, -50%) rotate(0deg);}
 .desc-list .toggle-btn.is-on::before,
-.desc-list .toggle-btn.is-on::after {transition: transform .2s ease-in-out, background .2s ease-in-out}
+.desc-list .toggle-btn.is-on::after {transition: transform .2s ease-in-out,rotate .2s ease-in-out,  background .2s ease-in-out}
 .desc-list .toggle-btn.is-on::before {transform: translate(-50%, -50%) rotate(45deg);background:#7bd700}
 .desc-list .toggle-btn.is-on::after {transform: translate(-50%, -50%) rotate(-45deg);background:#7bd700}
-.desc-list .icon-required-green,
-.desc-list .icon-checked-green {width:24px;height:24px;margin-right:10px;}
+.desc-list .icon{margin-right:10px;}
 .desc-list .colorscripter-code {margin-top:20px;}
 .desc-list .colorscripter-code > table {width:100%;}
 
@@ -238,14 +239,16 @@ h3.title-desc {margin-bottom:10px;}
 .pb50 {padding-bottom:50px !important;}
 
 /* icons */
-.icon {position:relative;display:inline-block;vertical-align:top;}
+.icon {position:relative;display:inline-block;vertical-align:top;width:24px;height:24px;}
 .icon.icon-bugger-white {background:url('../images/icons/icon-bugger-white.png') center center/contain no-repeat}
 .icon.icon-cross-white {background:url('../images/icons/icon-cross-white.png') center center/contain no-repeat}
 .icon.icon-warring-red {background:url('../images/icons/icon-warring-red.png') center center/contain no-repeat}
 .icon.icon-reply-blue {background:url('../images/icons/icon-reply-blue.png') center center/contain no-repeat}
-.icon.icon-circle-up-arrow-green {background:url('../images/icons/icon-circle-up-arrow-green.png') center center/contain no-repeat}
+.icon.icon-circle-up-arrow-white {background:url('../images/icons/icon-circle-up-arrow-white.png') center center/contain no-repeat}
 .icon.icon-required-green {background:url('../images/icons/icon-required-green.png') center center/contain no-repeat}
 .icon.icon-checked-green {background:url('../images/icons/icon-checked-green.png') center center/contain no-repeat}
+.icon.icon-link-dark-grey-circle {background:url('../images/icons/icon-link-dark-grey-circle.png') center center/contain no-repeat}
+.icon.icon-f12key-white {background:url('../images/icons/icon-f12key-white-bg.png') center center/contain no-repeat}
 
 
 

@@ -18,10 +18,13 @@
         <main class="main">
             <div class="content pt50 pb50">
                 <h2 class="title fc-orange">Array.prototype</h2>
+                <p class="desc">배열은 리스트와 비슷한 객체로 순회와 변형 작업을 수행하는 메서드를 갖게 된다. <br>배열의 내용은 언제든지 늘이거나 줄일 수 있다. <br>배열은 요소(value) index로 문자열을 사용할 수 없으며, 무조건 정수만 허용한다.</p>
+                <p class="reply-box mt10"><i class="icon icon-reply-blue"></i><em>나의 생각 : </em>그래서 굳이 따지자면 배열도 객체라는 말을 한다는 것을 알게 되었다.</p>
+
                 <section class="section mt50">
                     <h3 class="title mb10 fc-blue">1. Properties (속성)</h3>
                     <dl class="desc-list">
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">length</span> <button type="button" class="toggle-btn" data-toggle="arrayPropertiesToggle0" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">length</span> <button type="button" class="toggle-btn" data-toggle="arrayPropertiesToggle0" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPropertiesToggle0">
                             <p>length 속성은 <span class="fc-yellow">배열의 길이를 반환</span>한다.<br>
                             length는 <span class="fc-yellow">1부터 시작</span>한다. <br>
@@ -35,13 +38,8 @@
                     <h3 class="title mb10 fc-blue">2. Methods (명령어)</h3>
 
                     <dl class="desc-list">
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">at</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle0" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle0">
-                            <p>메서드는 정수 값을 받아, 배열에서 해당 값에 해당하는 <span
-                                    class="fc-yellow">인덱스의 요소를 반환 ( index는 0부터 시작 )</span>한다.
-                                <br>양수와 음수 모두 지정할 수 있고, 음수 값의 경우 배열의 뒤에서부터 인덱스를 센다.</p>
-
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/at" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">at</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
                         <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">concat</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle1" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle1">
@@ -53,30 +51,24 @@
                             <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;number1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">3</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;number2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#c10aff">4</span>,&nbsp;<span style="color:#c10aff">5</span>,&nbsp;<span style="color:#c10aff">6</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friendsConcat&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;friends1.concat(friends2);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friendsNumberConcat&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;friends1.concat(number1);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;numbersConcat&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;number1.concat(number2);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'concat()&nbsp;:&nbsp;'</span>,&nbsp;friendsConcat);&nbsp;<span style="color:#999999">//['철수',&nbsp;'영희',&nbsp;'길동',&nbsp;'중현',&nbsp;'수진',&nbsp;'선호']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'concat()&nbsp;:&nbsp;'</span>,&nbsp;friendsNumberConcat);&nbsp;<span style="color:#999999">//&nbsp;['철수',&nbsp;'영희',&nbsp;'길동',&nbsp;1,&nbsp;2,&nbsp;3]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'concat()&nbsp;:&nbsp;'</span>,&nbsp;numbersConcat);&nbsp;<span style="color:#999999">//[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6]</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">copyWithin</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle2" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle2">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">copyWithin</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">entries</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle3" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">entries</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle3" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle3">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열의 각 index에 대한 <span class="fc-yellow">key/value 쌍을 가지는 새로운 Array Iterator 객체를 반환</span>한다</p>
+                            <p class="reply-box plus-desc mt10"><em>Array Iterator : </em> 이터레이터(iterator)란 반복 처리(iteration)가 가능한 객체이다. <br>ECMAScript 6부터 추가된 이터레이터를 사용하면 개발자가 반복 처리를 단계별로 제어할 수 있습니다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>,&nbsp;<span style="color:#ffd500">'Sunny'</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;arrayIterator&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;friends.entries();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;1&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[0,&nbsp;'철수']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;2&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[1,&nbsp;'영희']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;3&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[2,&nbsp;'길동']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;4&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[3,&nbsp;'중현']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;5&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[4,&nbsp;'수진']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;6&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[5,&nbsp;'선호']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;7&nbsp;:&nbsp;'</span>,&nbsp;arrayIterator.next().value);&nbsp;<span style="color:#999999">//&nbsp;[6,&nbsp;'Sunny']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//ES6&nbsp;활용&nbsp;예</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'entries()&nbsp;:&nbsp;for&nbsp;of&nbsp;문에&nbsp;활용.'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;(<span style="color:#ff3399">let</span>&nbsp;[index,&nbsp;value]&nbsp;of&nbsp;friends.entries()){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(index,&nbsp;value);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;0&nbsp;'철수'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;1&nbsp;'영희'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;2&nbsp;'길동'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;3&nbsp;'중현'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;4&nbsp;'수진'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;5&nbsp;'선호'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;6&nbsp;'Sunny'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">every</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle4" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle4">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/every" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">every</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">fill</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle5" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle5">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/fill" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">fill</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">filter</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle6">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">filter</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
                         <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">find</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle7" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle7">
@@ -90,25 +82,17 @@
                             <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//ES5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;array&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#c10aff">10</span>,&nbsp;<span style="color:#c10aff">49</span>,&nbsp;<span style="color:#c10aff">32</span>,&nbsp;<span style="color:#c10aff">52</span>,&nbsp;<span style="color:#c10aff">40</span>,&nbsp;<span style="color:#c10aff">59</span>,&nbsp;<span style="color:#c10aff">11</span>,&nbsp;<span style="color:#c10aff">2</span>&nbsp;,&nbsp;<span style="color:#c10aff">99</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;findIndexFirst&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;array.findIndex(<span style="color:#ff3399">function</span>(&nbsp;value&nbsp;){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'findindex(&nbsp;in&nbsp;function&nbsp;value&nbsp;)&nbsp;:&nbsp;'</span>,&nbsp;value&nbsp;);&nbsp;<span style="color:#999999">//&nbsp;10,&nbsp;49,&nbsp;32,&nbsp;52</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;<span style="color:#c10aff">49</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">});</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'findindex(&nbsp;value&nbsp;&gt;&nbsp;49&nbsp;)&nbsp;:&nbsp;'</span>,&nbsp;findIndexFirst&nbsp;);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;49보다&nbsp;큰&nbsp;첫&nbsp;번째&nbsp;요소는&nbsp;52이다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;현재&nbsp;배열에서&nbsp;52까지의&nbsp;index는&nbsp;다음과&nbsp;같다&nbsp;[&nbsp;0,&nbsp;1,&nbsp;2,&nbsp;3&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;index&nbsp;값을&nbsp;반환하는&nbsp;findindex는&nbsp;3의&nbsp;값을&nbsp;출력한다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//ES6&nbsp;이렇게&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;findIndexFirst&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;array.findIndex(&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;<span style="color:#c10aff">49</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">flat</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle9" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle9">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flat" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">flat</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">flatMap</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle10" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle10">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">flatMap</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">forEach</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle11" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle11">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">forEach</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.<span class="fc-yellow">from</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle12" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle12">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.<span class="fc-yellow">from</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
                         <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">includes</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle13" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle13">
@@ -119,30 +103,27 @@
                             <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>,&nbsp;<span style="color:#ffd500">'Sunny'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;numbers&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">3</span>,&nbsp;<span style="color:#c10aff">4</span>,&nbsp;<span style="color:#c10aff">5</span>,&nbsp;<span style="color:#c10aff">6</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;sunny&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#ffd500">'sunny'</span>));&nbsp;<span style="color:#999999">//false</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;sunny&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#ffd500">'Sunny'</span>));&nbsp;<span style="color:#999999">//true</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;수진&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#ffd500">'수진'</span>));&nbsp;<span style="color:#999999">//true</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;5&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#c10aff">5</span>));&nbsp;<span style="color:#999999">//false</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;철수,&nbsp;2&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#c10aff">2</span>));&nbsp;<span style="color:#999999">//false</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;영희.&nbsp;1&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#c10aff">1</span>));&nbsp;<span style="color:#999999">//true</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;undefined&nbsp;)&nbsp;:'</span>,&nbsp;friends.includes(&nbsp;<span style="color:#0086b3">undefined</span>&nbsp;));&nbsp;<span style="color:#999999">//false</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;1&nbsp;)&nbsp;:'</span>,&nbsp;numbers.includes(&nbsp;<span style="color:#c10aff">1</span>&nbsp;));&nbsp;<span style="color:#999999">//true</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;7&nbsp;)&nbsp;:'</span>,&nbsp;numbers.includes(&nbsp;<span style="color:#c10aff">7</span>&nbsp;));&nbsp;<span style="color:#999999">//false</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;6,&nbsp;5)&nbsp;:'</span>,&nbsp;numbers.includes(&nbsp;<span style="color:#c10aff">6</span>,&nbsp;<span style="color:#c10aff">5</span>&nbsp;));&nbsp;<span style="color:#999999">//true</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'includes(&nbsp;null&nbsp;)&nbsp;:'</span>,&nbsp;numbers.includes(&nbsp;<span style="color:#4be6fa">null</span>&nbsp;));&nbsp;<span style="color:#999999">//false</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">indexOf</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle14" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">indexOf</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle14" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle14">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열에서 <span class="fc-yellow">지정된 요소(value)를 검색하여 있으면 첫번째 index를 없으면 -1을 반환</span>한다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;numbers&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">3</span>,&nbsp;<span style="color:#c10aff">4</span>,&nbsp;<span style="color:#c10aff">5</span>,&nbsp;<span style="color:#c10aff">6</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("수진")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#ffd500">'수진'</span>))&nbsp;<span style="color:#999999">//&nbsp;4</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("선호,&nbsp;수진")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#ffd500">'선호'</span>))&nbsp;<span style="color:#999999">//&nbsp;5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("수진")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#ffd500">'길동'</span>))&nbsp;<span style="color:#999999">//&nbsp;2</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("태광")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#ffd500">'태광'</span>))&nbsp;<span style="color:#999999">//&nbsp;-1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#ffd500">''</span>))&nbsp;<span style="color:#999999">//&nbsp;-1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("null")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#4be6fa">null</span>))&nbsp;<span style="color:#999999">//&nbsp;-1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("undefined")&nbsp;:&nbsp;'</span>,&nbsp;friends.<span style="color:#4be6fa">indexOf</span>(<span style="color:#0086b3">undefined</span>))&nbsp;<span style="color:#999999">//&nbsp;-1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("2")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">indexOf</span>(<span style="color:#c10aff">2</span>))&nbsp;<span style="color:#999999">//&nbsp;1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'indexOf("7")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">indexOf</span>(<span style="color:#c10aff">7</span>))&nbsp;<span style="color:#999999">//&nbsp;-1</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.<span class="fc-yellow">isArray</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle15" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle15">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.<span class="fc-yellow">isArray</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">join</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle16" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">join</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle16" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle16">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열의 <span class="fc-yellow">모든 요소(value)를 문자열로 변환 후, 전달 받은 인수를 구분자로 연결해 문자열로 반환</span>한다. <br>인수의 여백도 적용되는 것을 볼 수 있으며, 인수를 넣지 않으면 기본 구분자는 콤마( ',') 이다.</p>
+                            <p class="reply-box warning mt10"><i class="icon icon-warring-red"></i><em>주의 : </em>요소(value) 값이 <em>undefined</em> 또는 <em>null</em>이면 빈 문자열로 변환한다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;introduce&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'안녕하세요'</span>,&nbsp;<span style="color:#ffd500">'반갑습니다'</span>,&nbsp;<span style="color:#ffd500">'환영합니다'</span>,&nbsp;<span style="color:#ffd500">'앞으로&nbsp;잘&nbsp;부탁드립니다.'</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;numbers&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">3</span>,&nbsp;<span style="color:#c10aff">4</span>,&nbsp;<span style="color:#c10aff">5</span>,&nbsp;<span style="color:#c10aff">6</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//문자열</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join()&nbsp;:&nbsp;'</span>,&nbsp;introduce.<span style="color:#4be6fa">join</span>())&nbsp;<span style="color:#999999">//&nbsp;안녕하세요,반갑습니다,환영합니다,앞으로&nbsp;잘&nbsp;부탁드립니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("&nbsp;")&nbsp;:&nbsp;'</span>,&nbsp;introduce.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'&nbsp;'</span>))&nbsp;<span style="color:#999999">//&nbsp;안녕하세요&nbsp;반갑습니다&nbsp;환영합니다&nbsp;앞으로&nbsp;잘&nbsp;부탁드립니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("-")&nbsp;:&nbsp;'</span>,&nbsp;introduce.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'-'</span>))&nbsp;<span style="color:#999999">//&nbsp;안녕하세요-반갑습니다-환영합니다-앞으로&nbsp;잘&nbsp;부탁드립니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("&lt;br&gt;")&nbsp;:&nbsp;'</span>,&nbsp;introduce.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'&lt;br&gt;'</span>))&nbsp;<span style="color:#999999">//&nbsp;&nbsp;안녕하세요&lt;br&gt;반갑습니다&lt;br&gt;환영합니다&lt;br&gt;앞으로&nbsp;잘&nbsp;부탁드립니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//숫자</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("&nbsp;")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'&nbsp;'</span>))&nbsp;<span style="color:#999999">//&nbsp;&nbsp;1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join(":")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">':'</span>))&nbsp;<span style="color:#999999">//&nbsp;&nbsp;1:2:3:4:5:6</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("&nbsp;:&nbsp;")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'&nbsp;:&nbsp;'</span>))&nbsp;<span style="color:#999999">//&nbsp;&nbsp;1&nbsp;:&nbsp;2&nbsp;:&nbsp;3&nbsp;:&nbsp;4&nbsp;:&nbsp;5&nbsp;:&nbsp;6</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'join("-")&nbsp;:&nbsp;'</span>,&nbsp;numbers.<span style="color:#4be6fa">join</span>(<span style="color:#ffd500">'-'</span>))&nbsp;<span style="color:#999999">//&nbsp;&nbsp;1-2-3-4-5-6</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">keys</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle17" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle17">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/keys" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">keys</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.<span class="fc-yellow">lastIndexOf</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle18" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle18">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">lastIndexOf</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
                         <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">map</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle19" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle19">
@@ -150,19 +131,16 @@
                             <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//ES5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;array&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#c10aff">10</span>,&nbsp;<span style="color:#c10aff">49</span>,&nbsp;<span style="color:#c10aff">32</span>,&nbsp;<span style="color:#c10aff">52</span>,&nbsp;<span style="color:#c10aff">40</span>,&nbsp;<span style="color:#c10aff">59</span>,&nbsp;<span style="color:#c10aff">11</span>,&nbsp;<span style="color:#c10aff">2</span>&nbsp;,&nbsp;<span style="color:#c10aff">99</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;arrayMap&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;array.map(<span style="color:#ff3399">function</span>(&nbsp;value&nbsp;){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'map(&nbsp;in&nbsp;function&nbsp;value&nbsp;)&nbsp;:&nbsp;'</span>,&nbsp;value&nbsp;);&nbsp;<span style="color:#999999">//&nbsp;10,&nbsp;49,&nbsp;32,&nbsp;52</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>&nbsp;<span style="color:#c10aff">2</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">});</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'map(&nbsp;value&nbsp;*&nbsp;2&nbsp;)&nbsp;:&nbsp;'</span>,&nbsp;arrayMap&nbsp;);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;모든&nbsp;value에&nbsp;2배&nbsp;값을&nbsp;리턴한다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;[20,&nbsp;98,&nbsp;64,&nbsp;104,&nbsp;80,&nbsp;118,&nbsp;22,&nbsp;4,&nbsp;198]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//ES6&nbsp;이렇게&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;arrayMap&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;array.map(&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;value&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>&nbsp;<span style="color:#c10aff">2</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">of</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle20" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle20">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/of" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.<span class="fc-yellow">of</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">pop</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle21" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle21">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">pop</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">push</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle22" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">push</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle22" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle22">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열에 마지막 index의 뒤로<span class="fc-yellow"> 하나 이상의 요소(value)를 추가하고, 배열의 새로운 길이를 반환</span>한다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;빈&nbsp;배열</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push(길동)&nbsp;:&nbsp;'</span>,&nbsp;friends.push(<span style="color:#ffd500">'길동'</span>))&nbsp;<span style="color:#999999">//&nbsp;1&nbsp;길이를&nbsp;반환</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push()&nbsp;원본&nbsp;배열&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;)&nbsp;<span style="color:#999999">//&nbsp;['길동']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push(중현)&nbsp;:&nbsp;'</span>,&nbsp;friends.push(<span style="color:#ffd500">'중현'</span>))&nbsp;<span style="color:#999999">//&nbsp;2&nbsp;길이를&nbsp;반환</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push()&nbsp;원본&nbsp;배열&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;)&nbsp;<span style="color:#999999">//&nbsp;['길동',&nbsp;'중현']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push(수진)&nbsp;:&nbsp;'</span>,&nbsp;friends.push(<span style="color:#ffd500">'수진'</span>))&nbsp;<span style="color:#999999">//&nbsp;3&nbsp;길이를&nbsp;반환</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push()&nbsp;원본&nbsp;배열&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;)&nbsp;<span style="color:#999999">//&nbsp;['길동',&nbsp;'중현',&nbsp;'수진']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push(단희)&nbsp;:&nbsp;'</span>,&nbsp;friends.push(<span style="color:#ffd500">'단희'</span>))&nbsp;<span style="color:#999999">//&nbsp;4&nbsp;길이를&nbsp;반환</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'push()&nbsp;원본&nbsp;배열&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;)&nbsp;<span style="color:#999999">//&nbsp;['길동',&nbsp;'중현',&nbsp;'수진'.&nbsp;'단희']</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
                         <dt><i class="icon icon-required-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">reduce</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle23" title="토글 박스 열기/닫기">버튼</button></dt>
@@ -178,65 +156,104 @@
                             <span class="reply-box plus-desc mt10">initialValue 값을 정의 하지 않으면, reduce()는 index 1부터 시작해 콜백 함수를 실행하고, 첫번째 index를 생략한다. initialValue을 정의하면 index 0에서 시작한다. </span>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">reduceRight</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle24" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle24">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">reduceRight</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">reverse</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle25" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle25">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">reverse</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">shift</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle26" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle26">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">shift</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">slice</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle27" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">slice</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle27" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle27">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열의 시작과 끝에 대해 요소(value)들을 잘라내고 <span class="fc-yellow">복사해서 새로운 배열 객체로 반환</span>한다.<br>이때 원본 배열은 바뀌지 않는다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>,&nbsp;<span style="color:#ffd500">'Sunny'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;음수는&nbsp;역방향&nbsp;정수는&nbsp;정방향인&nbsp;것을&nbsp;알&nbsp;수&nbsp;있다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(-2)'</span>,&nbsp;friends.slice(<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span><span style="color:#c10aff">2</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'선호',&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(-1)'</span>,&nbsp;friends.slice(<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span><span style="color:#c10aff">1</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice()'</span>,&nbsp;friends.slice())&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'철수',&nbsp;'영희',&nbsp;'길동',&nbsp;'중현',&nbsp;'수진',&nbsp;'선호',&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(0)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">0</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'철수',&nbsp;'영희',&nbsp;'길동',&nbsp;'중현',&nbsp;'수진',&nbsp;'선호',&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(1)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">1</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'영희',&nbsp;'길동',&nbsp;'중현',&nbsp;'수진',&nbsp;'선호',&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(2)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">2</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'길동'.&nbsp;'중현',&nbsp;'수진',&nbsp;'선호'&nbsp;,&nbsp;'Sunny'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(2,&nbsp;4)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">4</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'길동',&nbsp;'중현'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(1,&nbsp;5)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">5</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'영희',&nbsp;'길동',&nbsp;'중현',&nbsp;'수진'&nbsp;]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'slice(2,&nbsp;-1)'</span>,&nbsp;friends.slice(<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span><span style="color:#c10aff">1</span>))&nbsp;<span style="color:#999999">//&nbsp;[&nbsp;'길동',&nbsp;'중현',&nbsp;'수진',&nbsp;'선호'&nbsp;]</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">some</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle28" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle28">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">some</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">sort</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle29" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dt><i class="icon icon-checked-green"></i><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">sort</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle29" title="토글 박스 열기/닫기">버튼</button></dt>
                         <dd class="box" data-toggle-box="arrayPrototypeToggle29">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
+                            <p>배열의 요소(value)를 적절한 위치에 <span class="fc-yellow">정렬한 후 그 배열을 반환</span>한다. <br> Array.<span class="fc-yellow">sort</span>( <span class="fc-orange">function</span>(){} ) : 함수를 넣어 원하는 정렬 방식으로 셋팅 할 수 있다.<br> Array.<span class="fc-yellow">sort</span>(); : 함수를 생략하면 각 문자의 유니 코드 코드 포인트 값에 따라 정렬 된다.</p>
+                            <p class="reply-box warning mt10"><i class="icon icon-warring-red"></i><em>주의 : </em>복사되어 새 배열로 반환 되는 것이 아니라 본 배열이 변환된다.</p>
+                            <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div><div style="line-height:130%">45</div><div style="line-height:130%">46</div><div style="line-height:130%">47</div><div style="line-height:130%">48</div><div style="line-height:130%">49</div><div style="line-height:130%">50</div><div style="line-height:130%">51</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;friends&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'중현'</span>,&nbsp;<span style="color:#ffd500">'수진'</span>,&nbsp;<span style="color:#ffd500">'선호'</span>,&nbsp;<span style="color:#ffd500">'Sunny'</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;numbers&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[&nbsp;<span style="color:#c10aff">32</span>,&nbsp;<span style="color:#c10aff">14</span>,&nbsp;<span style="color:#c10aff">7</span>,&nbsp;<span style="color:#c10aff">9</span>,&nbsp;<span style="color:#c10aff">25</span>,&nbsp;<span style="color:#c10aff">32</span>,&nbsp;<span style="color:#c10aff">47</span>&nbsp;];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;obj&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;{<span style="color:#4be6fa">name</span>:<span style="color:#ffd500">'바나나'</span>,&nbsp;price:<span style="color:#c10aff">3000</span>},</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;{<span style="color:#4be6fa">name</span>:<span style="color:#ffd500">'사과'</span>,&nbsp;price:<span style="color:#c10aff">1000</span>},</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;{<span style="color:#4be6fa">name</span>:<span style="color:#ffd500">'귤'</span>,&nbsp;price:<span style="color:#c10aff">300</span>},</div><div style="padding:0 6px; white-space:pre; line-height:130%">];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;기본&nbsp;정렬&nbsp;문자열,&nbsp;숫자</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;string&nbsp;:&nbsp;'</span>,&nbsp;friends.sort())&nbsp;<span style="color:#999999">//&nbsp;['Sunny',&nbsp;'길동',&nbsp;'선호',&nbsp;'수진',&nbsp;'영희',&nbsp;'중현',&nbsp;'철수']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;number&nbsp;:&nbsp;'</span>,&nbsp;numbers.sort())&nbsp;<span style="color:#999999">//&nbsp;[14,&nbsp;25,&nbsp;32,&nbsp;32,&nbsp;47,&nbsp;7,&nbsp;9]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;문자열&nbsp;정렬</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;string&nbsp;오름차순&nbsp;:&nbsp;'</span>,&nbsp;friends.sort())</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;오름차순&nbsp;['Sunny',&nbsp;'길동',&nbsp;'선호',&nbsp;'수진',&nbsp;'영희',&nbsp;'중현',&nbsp;'철수']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;배열&nbsp;변형&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;);&nbsp;<span style="color:#999999">//&nbsp;['Sunny',&nbsp;'길동',&nbsp;'선호',&nbsp;'수진',&nbsp;'영희',&nbsp;'중현',&nbsp;'철수']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;string&nbsp;내림차순&nbsp;:&nbsp;'</span>,&nbsp;friends.sort(<span style="color:#ff3399">function</span>(a,&nbsp;b){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>(a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;b)&nbsp;<span style="color:#ff3399">return</span>&nbsp;<span style="color:#c10aff">1</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>(a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;b)&nbsp;<span style="color:#ff3399">return</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span><span style="color:#c10aff">1</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>(a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;b)&nbsp;<span style="color:#ff3399">return</span>&nbsp;<span style="color:#c10aff">0</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}))&nbsp;<span style="color:#999999">//&nbsp;내림차순&nbsp;['철수',&nbsp;'중현',&nbsp;'영희',&nbsp;'수진',&nbsp;'선호',&nbsp;'길동',&nbsp;'Sunny']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;배열&nbsp;변형&nbsp;:&nbsp;'</span>,&nbsp;friends&nbsp;);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//['철수',&nbsp;'중현',&nbsp;'영희',&nbsp;'수진',&nbsp;'선호',&nbsp;'길동',&nbsp;'Sunny']</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;숫자&nbsp;정렬</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;number&nbsp;오름차순&nbsp;:&nbsp;'</span>,&nbsp;numbers.sort(<span style="color:#ff3399">function</span>(a,&nbsp;b){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span>&nbsp;b;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}))&nbsp;<span style="color:#999999">//&nbsp;오름차순&nbsp;[7,&nbsp;9,&nbsp;14,&nbsp;25,&nbsp;32,&nbsp;32,&nbsp;47]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;배열&nbsp;변형&nbsp;:&nbsp;'</span>,&nbsp;numbers&nbsp;);&nbsp;<span style="color:#999999">//&nbsp;[7,&nbsp;9,&nbsp;14,&nbsp;25,&nbsp;32,&nbsp;32,&nbsp;47]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;number&nbsp;내림차순&nbsp;:&nbsp;'</span>,&nbsp;numbers.sort(<span style="color:#ff3399">function</span>(a,&nbsp;b){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;b&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span>&nbsp;a&nbsp;;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}))&nbsp;<span style="color:#999999">//&nbsp;내림차순&nbsp;[47,&nbsp;32,&nbsp;32,&nbsp;25,&nbsp;14,&nbsp;9,&nbsp;7]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;배열&nbsp;변형&nbsp;:&nbsp;'</span>,&nbsp;numbers&nbsp;);&nbsp;<span style="color:#999999">//&nbsp;[47,&nbsp;32,&nbsp;32,&nbsp;25,&nbsp;14,&nbsp;9,&nbsp;7]</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//함수로&nbsp;객체&nbsp;정렬</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;비교함수&nbsp;객체&nbsp;오름차순&nbsp;정렬&nbsp;:&nbsp;'</span>,&nbsp;obj.sort(<span style="color:#ff3399">function</span>(a,&nbsp;b)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;a.price&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span>&nbsp;b.price;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}));</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;1&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">0</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'귤',&nbsp;price:&nbsp;300}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;2&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">1</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'사과',&nbsp;price:&nbsp;1000}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;3&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">2</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'바나나',&nbsp;price:&nbsp;3000}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;비교함수&nbsp;객체&nbsp;내림차순&nbsp;정렬&nbsp;:&nbsp;'</span>,&nbsp;obj.sort(<span style="color:#ff3399">function</span>(a,&nbsp;b)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;b.price&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">-</span>&nbsp;a.price&nbsp;;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}));</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;1&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">0</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'바나나',&nbsp;price:&nbsp;3000}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;2&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">1</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'사과',&nbsp;price:&nbsp;1000}</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'sort()&nbsp;원본&nbsp;객체&nbsp;변형&nbsp;3&nbsp;:&nbsp;'</span>,&nbsp;obj[<span style="color:#c10aff">2</span>]);&nbsp;<span style="color:#999999">//&nbsp;{name:&nbsp;'귤',&nbsp;price:&nbsp;300}</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
                         </dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">splice</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle30" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle30">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">splice</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">toLocaleString</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle31" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle31">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">toLocaleString</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">toString</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle32" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle32">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">toString</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">unshift</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle33" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle33">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">unshift</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
 
-                        <dt><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">values</span>( ) <button type="button" class="toggle-btn" data-toggle="arrayPrototypeToggle34" title="토글 박스 열기/닫기">버튼</button></dt>
-                        <dd class="box" data-toggle-box="arrayPrototypeToggle34">
-                            <p>인자로 주어진 배열이나 값들을 <span class="fc-yellow">기존 배열에 합쳐서 새 배열을 반환</span>한다.</p>
-                        </dd>
+                        <dt><i class="icon icon-link-dark-grey-circle"></i><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/values" class="link-set" title="MDN 사이트 바로가기" target="_blank"><strong class="fc-grey">Array</strong>.prototype.<span class="fc-yellow">values</span>( )</a></dt>
+                        <dd class="box">자세한 내용은 새창 연결</dd>
                     </dl>
                 </section>
+                <button type="button" data-popup-open="testPopup1">1팝업 열기</button>
+                <button type="button" data-popup-open="testPopup2">2팝업 열기</button>
             </div>
         </main>
     </div>
+
+    <!-- popup : START -->
+    <div class="popup-pocket">
+        <div class="popup-wrap" data-popup="testPopup1">
+            <div class="popup">
+                <div class="inner">
+                    <div class="pop-head">
+                        <div class="inner">
+                            <h3 class="title"></h3>
+                            <button type="button" data-popup-close="testPopup1"></button>
+                        </div>
+                    </div>
+                    <div class="pop-body">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="pop-foot">
+                        <div class="inner">
+                            <button type="button" data-popup-close="testPopup1">취소</button>
+                            <button type="button" data-popup-close="testPopup1">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // popup : END -->
+
+    <!-- popup : START -->
+    <div class="popup-pocket">
+        <div class="popup-wrap" data-popup="testPopup2">
+            <div class="popup">
+                <div class="inner">
+                    <div class="pop-head">
+                        <div class="inner">
+                            <h3 class="title"></h3>
+                            <button type="button" data-popup-close="testPopup2"></button>
+                        </div>
+                    </div>
+                    <div class="pop-body">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="pop-foot">
+                        <div class="inner">
+                            <button type="button" data-popup-close="testPopup2">취소</button>
+                            <button type="button" data-popup-close="testPopup2">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // popup : END -->
 
 </div>
 <script>
@@ -255,7 +272,9 @@ console.log('length : ',friends3.length);//4
 console.log('length : ',friends4.length);//5
 console.log('length : ',friends5.length);//6
 }
+{
 console.log('');
+}
 {
 const friends1 = [ '철수', '영희', '길동' ];
 const friends2 = [ '중현', '수진', '선호' ];
@@ -270,7 +289,37 @@ console.log('concat() : ', friendsConcat); //['철수', '영희', '길동', '중
 console.log('concat() : ', friendsNumberConcat); // ['철수', '영희', '길동', 1, 2, 3]
 console.log('concat() : ', numbersConcat); //[1, 2, 3, 4, 5, 6]
 }
+{
 console.log('');
+}
+{
+const friends = ['철수', '영희', '길동', '중현', '수진', '선호', 'Sunny'];
+const arrayIterator = friends.entries();
+
+console.log('entries() 1 : ', arrayIterator.next().value); // [0, '철수']
+console.log('entries() 2 : ', arrayIterator.next().value); // [1, '영희']
+console.log('entries() 3 : ', arrayIterator.next().value); // [2, '길동']
+console.log('entries() 4 : ', arrayIterator.next().value); // [3, '중현']
+console.log('entries() 5 : ', arrayIterator.next().value); // [4, '수진']
+console.log('entries() 6 : ', arrayIterator.next().value); // [5, '선호']
+console.log('entries() 7 : ', arrayIterator.next().value); // [6, 'Sunny']
+
+//ES6 활용 예
+console.log('entries() : for of 문에 활용.');
+for (let [index, value] of friends.entries()){
+    console.log(index, value);
+    // 0 '철수'
+    // 1 '영희'
+    // 2 '길동'
+    // 3 '중현'
+    // 4 '수진'
+    // 5 '선호'
+    // 6 'Sunny'
+}
+}
+{
+console.log('');
+}
 {
 const friends = [ '철수', '영희', '길동', '중현', '수진', '선호', 'Sunny' ];
 const numbers = [ 1, 2, 3, 4, 5, 6 ];
@@ -289,7 +338,46 @@ console.log('includes( 6, 5) :', numbers.includes( 6, 5 )); //true
 console.log('includes( null ) :', numbers.includes( null )); //false
 
 }
+{
 console.log('');
+}
+{
+const friends = [ '철수', '영희', '길동', '중현', '수진', '선호', '수진' ];
+const numbers = [1, 2, 3, 4, 5, 6];
+
+console.log('indexOf("수진") : ', friends.indexOf('수진')) // 4
+console.log('indexOf("선호, 수진") : ', friends.indexOf('선호')) // 5
+console.log('indexOf("수진") : ', friends.indexOf('길동')) // 2
+console.log('indexOf("태광") : ', friends.indexOf('태광')) // -1
+console.log('indexOf("") : ', friends.indexOf('')) // -1
+console.log('indexOf("null") : ', friends.indexOf(null)) // -1
+console.log('indexOf("undefined") : ', friends.indexOf(undefined)) // -1
+
+console.log('indexOf("2") : ', numbers.indexOf(2)) // 1
+console.log('indexOf("7") : ', numbers.indexOf(7)) // -1
+}
+{
+console.log('');
+}
+{
+const introduce = ['안녕하세요', '반갑습니다', '환영합니다', '앞으로 잘 부탁드립니다.'];
+const numbers = [1, 2, 3, 4, 5, 6];
+
+//문자열
+console.log('join() : ', introduce.join()) // 안녕하세요,반갑습니다,환영합니다,앞으로 잘 부탁드립니다.
+console.log('join(" ") : ', introduce.join(' ')) // 안녕하세요 반갑습니다 환영합니다 앞으로 잘 부탁드립니다.
+console.log('join("-") : ', introduce.join('-')) // 안녕하세요-반갑습니다-환영합니다-앞으로 잘 부탁드립니다.
+console.log('join("<br>") : ', introduce.join('<br>')) //  안녕하세요<br>반갑습니다<br>환영합니다<br>앞으로 잘 부탁드립니다.
+
+//숫자
+console.log('join(" ") : ', numbers.join(' ')) //  1 2 3 4 5 6
+console.log('join(":") : ', numbers.join(':')) //  1:2:3:4:5:6
+console.log('join(" : ") : ', numbers.join(' : ')) //  1 : 2 : 3 : 4 : 5 : 6
+console.log('join("-") : ', numbers.join('-')) //  1-2-3-4-5-6
+}
+{
+console.log('');
+}
 {
 //ES5
 const array = [10, 49, 32, 52, 40, 59, 11, 2 , 99 ];
@@ -336,7 +424,25 @@ console.log('map( value * 2 ) : ', arrayMap );
 //ES6 이렇게 사용
 //const arrayMap = array.map( value => value * 2);
 }
-console.log('');
+{
+    console.log('');
+}
+{
+// 빈 배열
+const friends = [];
+
+console.log('push(길동) : ', friends.push('길동')) // 1 길이를 반환
+console.log('push() 원본 배열 : ', friends ) // ['길동']
+console.log('push(중현) : ', friends.push('중현')) // 2 길이를 반환
+console.log('push() 원본 배열 : ', friends ) // ['길동', '중현']
+console.log('push(수진) : ', friends.push('수진')) // 3 길이를 반환
+console.log('push() 원본 배열 : ', friends ) // ['길동', '중현', '수진']
+console.log('push(단희) : ', friends.push('단희')) // 4 길이를 반환
+console.log('push() 원본 배열 : ', friends ) // ['길동', '중현', '수진'. '단희']
+}
+{
+    console.log('');
+}
 {
 //ES5
 const array = [10, -49, 32, 52, -40, 59, 11, 2 , 99 ];
@@ -357,6 +463,82 @@ console.log('reduce() : ', arrayReduce );
 
 //ES6 이렇게 사용
 //const arrayMap = array.map( value => value * 2);
+}
+{
+    console.log('');
+}
+{
+const friends = [ '철수', '영희', '길동', '중현', '수진', '선호', 'Sunny' ];
+
+// 음수는 역방향 정수는 정방향인 것을 알 수 있다.
+console.log('slice(-2)', friends.slice(-2)) // [ '선호', 'Sunny' ]
+console.log('slice(-1)', friends.slice(-1)) // [ 'Sunny' ]
+console.log('slice()', friends.slice()) // [ '철수', '영희', '길동', '중현', '수진', '선호', 'Sunny' ]
+console.log('slice(0)', friends.slice(0)) // [ '철수', '영희', '길동', '중현', '수진', '선호', 'Sunny' ]
+console.log('slice(1)', friends.slice(1)) // [ '영희', '길동', '중현', '수진', '선호', 'Sunny' ]
+console.log('slice(2)', friends.slice(2)) // [ '길동'. '중현', '수진', '선호' , 'Sunny' ]
+console.log('slice(2, 4)', friends.slice(2, 4)) // [ '길동', '중현' ]
+console.log('slice(1, 5)', friends.slice(1, 5)) // [ '영희', '길동', '중현', '수진' ]
+console.log('slice(2, -1)', friends.slice(2, -1)) // [ '길동', '중현', '수진', '선호' ]
+}
+{
+console.log('');
+}
+{
+const friends = [ '철수', '영희', '길동', '중현', '수진', '선호', 'Sunny' ];
+const numbers = [ 32, 14, 7, 9, 25, 32, 47 ];
+const obj = [
+    {name:'바나나', price:3000},
+    {name:'사과', price:1000},
+    {name:'귤', price:300},
+];
+
+// 기본 정렬 문자열, 숫자
+console.log('sort() string : ', friends.sort()) // ['Sunny', '길동', '선호', '수진', '영희', '중현', '철수']
+console.log('sort() number : ', numbers.sort()) // [14, 25, 32, 32, 47, 7, 9]
+
+// 문자열 정렬
+console.log('sort() string 오름차순 : ', friends.sort())
+// 오름차순 ['Sunny', '길동', '선호', '수진', '영희', '중현', '철수']
+console.log('sort() 원본 배열 변형 : ', friends ); // ['Sunny', '길동', '선호', '수진', '영희', '중현', '철수']
+
+console.log('sort() string 내림차순 : ', friends.sort(function(a, b){
+    if(a < b) return 1;
+    if(a > b) return -1;
+    if(a === b) return 0;
+})) // 내림차순 ['철수', '중현', '영희', '수진', '선호', '길동', 'Sunny']
+console.log('sort() 원본 배열 변형 : ', friends );
+//['철수', '중현', '영희', '수진', '선호', '길동', 'Sunny']
+
+// 숫자 정렬
+console.log('sort() number 오름차순 : ', numbers.sort(function(a, b){
+    return a - b;
+})) // 오름차순 [7, 9, 14, 25, 32, 32, 47]
+console.log('sort() 원본 배열 변형 : ', numbers ); // [7, 9, 14, 25, 32, 32, 47]
+
+console.log('sort() number 내림차순 : ', numbers.sort(function(a, b){
+    return b - a ;
+})) // 내림차순 [47, 32, 32, 25, 14, 9, 7]
+console.log('sort() 원본 배열 변형 : ', numbers ); // [47, 32, 32, 25, 14, 9, 7]
+
+
+//함수로 객체 정렬
+console.log('sort() 비교함수 객체 오름차순 정렬 : ', obj.sort(function(a, b) {
+    return a.price - b.price;
+}));
+console.log('sort() 원본 객체 변형 1 : ', obj[0]); // {name: '귤', price: 300}
+console.log('sort() 원본 객체 변형 2 : ', obj[1]); // {name: '사과', price: 1000}
+console.log('sort() 원본 객체 변형 3 : ', obj[2]); // {name: '바나나', price: 3000}
+
+console.log('sort() 비교함수 객체 내림차순 정렬 : ', obj.sort(function(a, b) {
+    return b.price - a.price ;
+}));
+console.log('sort() 원본 객체 변형 1 : ', obj[0]); // {name: '바나나', price: 3000}
+console.log('sort() 원본 객체 변형 2 : ', obj[1]); // {name: '사과', price: 1000}
+console.log('sort() 원본 객체 변형 3 : ', obj[2]); // {name: '귤', price: 300}
+}
+{
+    console.log('');
 }
 </script>
 </body>
