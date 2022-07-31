@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
         toggleBoxGroup: [],
         toggleBoxOpenGroup: [],
         isOpenEvent: null,
-        isDimmed: false,
+        isDimmed: null,
         scrollTopElement:'',
         init: function() {
             this.loaderClear();
@@ -63,10 +63,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
             this.popupGroup.map( value => {
                 const open = document.querySelector('[data-popup-open=' + value + ']');
-                const close = document.querySelector('[data-popup-close=' + value + ']');
+                const closeGroup = document.querySelectorAll('[data-popup-close=' + value + ']');
+
+                for(let [index , element ] of closeGroup.entries()) {
+                    element.addEventListener('click', () => this.useDimmedClose( value ,'popup', 'is-on'));
+                };
 
                 open.addEventListener('click', () => this.useDimmedOpen( value ,'popup', 'is-on'));
-                close.addEventListener('click', () => this.useDimmedClose( value ,'popup', 'is-on'));
+
             });
         },
         toggleBox : function () {
@@ -95,28 +99,35 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         },
         dimmedCloseEvent : function() {
-            const dimmed = document.querySelector('.dimmed');
-            const currentEvent = document.querySelector(this.isOpenEvent)
-            dimmed.addEventListener('click', () => {
+            const currentEvent = document.querySelector(this.isOpenEvent);
+            this.isDimmed.addEventListener('click', () => {
                 if(this.isOpenEvent){
                     if(currentEvent.classList.contains('is-on')){
                         currentEvent.classList.remove('is-on');
                         this.removeDimmed();
                         this.isOpenEvent = null;
+                        this.isDimmed = null;
                     }
                 }
             });
         },
         useDimmedOpen : function ( value , dataName, className ) {
             this.activate('[data-' + dataName + '=' + value + ']',  className );
-            this.addDimmed();
             this.isOpenEvent = '[data-' + dataName + '=' + value + ']';
+            if(dataName === 'popup'){
+                this.addDimmed(this.isOpenEvent);
+            } else {
+                this.addDimmed();
+            }
             this.dimmedCloseEvent();
         },
         useDimmedClose : function ( value , dataName, className ) {
             this.inActivate('[data-' + dataName + '=' + value + ']',  className );
             this.removeDimmed();
             this.isOpenEvent = null;
+        },
+        toggleClass : function ( el, className ) {
+            el.classList.toggle( className );
         },
         activate: function ( data , className ) {
             const targetEl = document.querySelector(data);
@@ -128,20 +139,21 @@ document.addEventListener("DOMContentLoaded", function(){
             targetEl.classList.remove(className);
 
         },
-        toggleClass : function ( el, className ) {
-            el.classList.toggle( className );
-        },
-        addDimmed : function (){
+        addDimmed : function ( element = this.body){
             const div = document.createElement('div');
             this.body.classList.add('is-fixed');
             div.classList.add('dimmed');
-            this.body.append(div);
-            this.isDimmed = true;
+            if(element !== this.body){
+                document.querySelector(element).append(div);
+            } else {
+                element.append(div);
+            }
+            this.isDimmed = div;
         },
         removeDimmed : function () {
             this.body.classList.remove('is-fixed');
             this.body.querySelector('.dimmed').remove();
-            this.isDimmed = false;
+            this.isDimmed = null;
         }
     }
 

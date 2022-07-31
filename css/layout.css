@@ -19,9 +19,12 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .overlay-nav-wrap .nav-head {position:relative;padding:16px 60px 16px 10px;background: #ff522b}
 .overlay-nav-wrap .nav-head > .title {font-size:20px;line-height:1;margin:0;color:#fff;}
 .overlay-nav-wrap .nav-head > button {position :absolute;top:50%;right:0;transform: translateY(-50%);padding:16px;}
-.overlay-nav-wrap .nav-body {padding:10px 20px 10px 10px;height:calc(100vh - 40px);overflow:hidden;overflow-y:auto;}
+.overlay-nav-wrap .nav-body {padding:10px 20px 10px 10px;height:calc(100vh - 52px);overflow:hidden;overflow-y:auto;}
+.overlay-nav-wrap .nav-body .nav-group-title {position:relative;}
 .overlay-nav-wrap .nav-body li > a {display:block;color:#ddd;}
-.overlay-nav-wrap .nav-body li + li {margin-top:10px;}
+.overlay-nav-wrap .nav-body > li {padding: 10px 0;border-bottom: 1px dotted #6e6e6e;}
+.overlay-nav-wrap .nav-body .toggle-box li + li {margin-top:10px;}
+.overlay-nav-wrap .nav-body .toggle-box.is-show{margin-top:20px;background:#444;padding:10px;font-size:.7rem;}
 
 .overlay-nav-open-btn,
 .overlay-nav-close-btn {position:relative;background:transparent;border:0;padding:0;}
@@ -32,7 +35,15 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 
 /* popup */
 .popup-wrap {display:none;position:fixed;top:0;left:0;width:100%;height:100%;align-items: center;justify-content: center;z-index:99;}
-.popup-wrap.is-on {ddisplay:flex;}
+.popup-wrap.is-on {display:block;}
+.popup-wrap.is-on .popup {position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:2;background:#fff;}
+.popup-wrap .pop-head {background:#4eadff}
+.popup-wrap .pop-head .inner {padding:.5rem 1rem;}
+.popup-wrap .pop-body .inner {padding:1rem;}
+.popup-wrap .pop-body .inner {padding:1rem;font-size:.9rem;line-height:1.2;color:#000;}
+.popup-wrap .pop-foot .inner {padding:.5rem 1rem;font-size:0;line-height:1;text-align:center;}
+.popup-wrap .pop-foot .inner button + button {margin-left:5px;}
+.popup-wrap .dimmed{z-index:1}
 
 /* boxs */
 .reply-box {position:relative;display:inline-block;padding:10px 10px 10px 15px;border-radius:5px;font-size:14px;line-height:20px;color:#000;background: #bee0ff;}
@@ -68,7 +79,3 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .scroll-top-wrap.is-on {opacity:1;transition: opacity .3s linear;z-index:10;}
 .scroll-top-wrap > button {background: transparent;border:0;font-size:.7rem;line-height:18px;font-weight:800}
 .scroll-top-wrap > button >.icon {width:18px;height:18px;margin-left:5px;}
-
-/* console-guide */
-.console-guide {position:fixed;right:10px;top:50%;transform: translateY(-50%);font-size:0;}
-.console-guide .icon {width:25px;background-color:#fff;}
