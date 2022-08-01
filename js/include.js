@@ -15,6 +15,9 @@ const include = {
                 document.write('<link rel="stylesheet" href="css/common.css">');
                 document.write('<link rel="stylesheet" href="css/layout.css">');
             },
+            swiper : function() {
+                document.write('<link rel="stylesheet" href="css/vendor/swiper-bundle.min.css">');
+            }
         },
         scripts : {
             common : function () {
@@ -22,6 +25,9 @@ const include = {
                 document.write('<script type="text/javascript" src="js/vendor/polyfill.min.js"></script>');
                 document.write('<script src="js/common.js"></script>');
             },
+            swiper : function () {
+                document.write('<script type="text/javascript" src="js/vendor/swiper-bundle.min.js"></script>');
+            }
         }
     },
     footer : {
@@ -29,6 +35,7 @@ const include = {
             _this : function () {
                 document.write('<script src="js/this.js"></script>');
             }
+
         }
     },
     html : {
@@ -51,9 +58,10 @@ const include = {
                 + '<button type="button" class="overlay-nav-close-btn" data-overlay-close="gnbNav" title="GNB NAV 닫기"><i class="icon icon-cross-white"><span class="blind">GNB 닫기</span></i></button>'
                 + '</div>'
                 + '<ul class="nav-body">'
+                + '<li><a href="index.html" target="_self">Home</a></li>'
                 + '<li><div class="nav-group-title">Javascript<button type="button" class="toggle-btn type2" data-toggle="gnbListGroup1"></button></div>'
                 + '<ul class="toggle-box" data-toggle-box="gnbListGroup1">'
-                + '<li><a href="index.html">바닐라 자바스크립란?</a></li>'
+                + '<li><a href="javascript-info.html">바닐라 자바스크립란?</a></li>'
                 + '<li><a href="this.html">this의 개념</a></li>'
                 + '<li><a href="function.html">자바스크립트 함수의 종류 및 정의</a></li>'
                 + '<li><a href="built-in-function.html">자바스크림트 내장 함수</a></li>'
@@ -77,7 +85,12 @@ const include = {
 
             return render;
         },
-        header: function (){
+        header: function ( title , src ){
+            if(title === undefined){
+                title = 'Home'
+                src = 'index.html'
+            }
+
             var render =
                 '<!-- HEADER : START -->'
                 + '<header id="header" class="header">'
@@ -86,8 +99,10 @@ const include = {
                 + '<button type="button" id="overlayNavButton" class="overlay-nav-open-btn" data-overlay-open="gnbNav"><i class="icon icon-bugger-white"><span class="blind">GNB 열기</span></i></button>'
                 + '</div>'
                 + '<div class="column">'
+                + '<h1><a href="index.html" class="title">Home</a></h1>'
                 + '</div>'
                 + '<div class="column">'
+                + '<button type="button" data-popup-open="commonPopup1">공통 팝업 열기</button>'
                 + '</div>'
                 + '</div>'
                 + '</header>'
@@ -113,6 +128,27 @@ const include = {
                 + '<!--//SCROLL TOP : END -->';
             return render;
         },
+        commonPopup : function () {
+            var render =
+                '<!-- popup : START -->'
+                + '<div class="popup-wrap" data-popup="commonPopup1">'
+                + '<div class="popup">'
+                + '<div class="inner">'
+                + '<div class="pop-head">'
+                + '<div class="inner">'
+                + '<h3 class="title">제목 입니다.</h3>'
+                + '<button type="button" class="pop-head-close-btn" data-popup-close="commonPopup1"><i class="icon icon-cross-white"><span class="blind">popup 닫기</span></i></button>'
+                + '</div>'
+                + '</div>'
+                + '<div class="pop-body">'
+                + '<div class="inner">팝업 컨텐츠 테스트 입니다.</div>'
+                + '</div>'
+                + '</div>'
+                + '</div>'
+                + '</div>'
+                + '<!-- // popup : END -->';
+            return render;
+        }
     }
 }
 
@@ -141,7 +177,8 @@ function defaultRender() {
         main: '<!-- MAIN : START -->' + main.innerHTML + '<!-- MAIN : END -->',
         footer: include.html.footer(),
         scrollTopMove: include.html.scrollTopMove(),
-        popups : popupRender
+        htmlInPopups : popupRender,
+        commonPopup : include.html.commonPopup()
     }
     wrap.innerHTML =
         render.loader +
@@ -150,7 +187,8 @@ function defaultRender() {
         render.footer +
         render.overlayNav +
         render.scrollTopMove +
-        render.popups
+        render.htmlInPopups +
+        render.commonPopup
 }
 
 document.addEventListener("DOMContentLoaded", function() {

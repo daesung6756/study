@@ -1,8 +1,10 @@
 'use strict'
 
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
 
-    //overlay nav
     const UI = {
         backtick : 192,
         html : document.querySelector('html'),
@@ -21,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function(){
         scrollTopElement:'',
         init: function() {
             this.loaderClear();
-            this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : 0');
-            this.popupElements.length > 0 ? this.popups() : console.log('data-popup length : 0');
-            this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : 0');
+            this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : none');
+            this.popupElements.length > 0 ? this.popups() : console.log('data-popup length : none');
+            this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : none');
             this.scrollTopView();
             this.scrollTopClickEvent();
         },
@@ -156,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function(){
             this.isDimmed = null;
         }
     }
-
     UI.init();
 
     document.addEventListener('scroll', function(){
