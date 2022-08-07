@@ -22,56 +22,67 @@
                     <section class="section">
                         <div class="swiper key-visual-swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide js-slide"><strong class="title">JS</strong>
+                                <div class="swiper-slide js-slide"><strong class="type-title">JS</strong>
                                     <div class="desc-box">
-                                        <ul class="desc">
-                                            <li>HTML/CSS와 완전히 통합할 수 있음</li>
-                                            <li>간단한 일은 간단하게 처리할 수 있게 해줌</li>
-                                            <li>모든 주요 브라우저에서 지원하고, 기본 언어로 사용됨</li>
+                                        <strong class="desc-title">Javascript</strong>
+                                        <ul class="desc-list mt10">
+                                            <li>바닐라 자바스브팁트란?</li>
+                                            <li>this의 개념 이해.</li>
+                                            <li>자바스크립트 함수 종류 및 정의</li>
+                                            <li>자바스크립트 내장 함수 종류</li>
+                                            <li>배열 메서드 프로퍼티 정리.</li>
+                                            <li>...</li>
                                         </ul>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="javascript-info.html" class="btn btn-round bg-primary mt20" target="_self">바로가기</a>
                                     </div>
                                 </div>
-                                <div class="swiper-slide html-slide"><strong class="title">HTML</strong>
+                                <div class="swiper-slide html-slide"><strong class="type-title">HTML</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="html-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide css-slide"><strong class="title">CSS</strong>
+                                <div class="swiper-slide css-slide"><strong class="type-title">CSS</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="css-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide node-slide"><strong class="title">NodeJs</strong>
+                                <div class="swiper-slide node-slide"><strong class="type-title">NodeJs</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="node-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide es6-slide"><strong class="title">Es6</strong>
+                                <div class="swiper-slide es6-slide"><strong class="type-title">Es6</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="es6-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide webpack-slide"><strong class="title">Webpack</strong>
+                                <div class="swiper-slide webpack-slide"><strong class="type-title">Webpack</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="webpack-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide vue-slide"><strong class="title">VUE</strong>
+                                <div class="swiper-slide vue-slide"><strong class="type-title">VUE</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="vue-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
-                                <div class="swiper-slide react-slide"><strong class="title">REACT</strong>
+                                <div class="swiper-slide react-slide"><strong class="type-title">REACT</strong>
+                                    <div class="comming-soon">Comming Soon</div>
                                     <p class="desc-box">
                                         <span class="desc">테스트 중입니다.</span><br>
-                                        <a href="" class="btn btn-round bg-primary" target="_self">바로가기</a>
+                                        <a href="react-info.html" class="btn btn-round bg-primary mt10" target="_self">바로가기</a>
                                     </p>
                                 </div>
                             </div>
@@ -150,6 +161,10 @@
     var options = {
         slidesPerView: 1,
         spaceBetween: 0,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

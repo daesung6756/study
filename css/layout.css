@@ -89,18 +89,33 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 .scroll-top-wrap > button {background: transparent;border:0;font-size:.7rem;line-height:18px;font-weight:800}
 .scroll-top-wrap > button >.icon {width:18px;height:18px;margin-left:5px;}
 
-.key-visual-swiper {
-    position:relative;
-    width: 100%;
-}
+/* main key visual slide */
+.key-visual-swiper {position:relative;width: 100%;}
 .key-visual-swiper .swiper-slide {position:relative;}
-.key-visual-swiper .swiper-slide > .title {position:absolute;bottom:0;right:10px;font-size:5rem;}
-.key-visual-swiper .swiper-slide > .desc-box {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:80%;font-size:1rem;margin:0;}
-.key-visual-swiper .swiper-slide {height:528px;}
+.key-visual-swiper .swiper-slide .type-title {position:absolute;bottom:0;right:10px;font-size:5rem;z-index:3;}
+.key-visual-swiper .swiper-slide .desc-box {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:80%;font-size:1rem;margin:0;}
+.key-visual-swiper .swiper-slide .desc-title {font-size:2rem;font-weight: 800;line-height:1;}
+.key-visual-swiper .swiper-slide .desc {font-size:.8rem;line-height:1.2;}
+.key-visual-swiper .swiper-slide .desc-list {font-size:.8rem;line-height:1.2;}
+.key-visual-swiper .swiper-slide .desc-list li + li {margin-top:5px;}
+.key-visual-swiper .swiper-slide {height:420px;}
 .key-visual-swiper .js-slide {background: rgb(255, 217, 0);color:#333;}
-.key-visual-swiper .js-slide > .desc {color:#333}
+.key-visual-swiper .js-slide > .desc,
+.key-visual-swiper .js-slide > .desc-list{color:#333;}
 .key-visual-swiper .html-slide {background: #007bff;color:#fff;}
-.key-visual-swiper .html-slide > .desc {color:#fff;}
+.key-visual-swiper .html-slide > .desc,
+.key-visual-swiper .html-slide > .desc-list {color:#fff;}
 .key-visual-swiper .css-slide {background: #24682a;color:#fff;}
-.key-visual-swiper .css-slide > .desc {color:#fff;}
+.key-visual-swiper .css-slide > .desc,
+.key-visual-swiper .css-slide > .desc-list {color:#fff;}
+.key-visual-swiper .comming-soon {position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background: rgba(0,0,0,.8);font-size:2rem;font-weight:800;color:#999;line-height:1;padding:0 2rem;word-break:break-all;z-index:2}
+.key-visual-swiper .swiper-button-next,
+.key-visual-swiper .swiper-button-prev {background:transparent;width:44px;border-radius:50%;transition: background-color .3s}
+.key-visual-swiper .swiper-button-next:hover,
+.key-visual-swiper .swiper-button-prev:hover {background:#333;transition: background-color .3s}
+.key-visual-swiper .swiper-button-next::after,
+.key-visual-swiper .swiper-button-prev::after {font-size:20px;font-weight:800;}
+.key-visual-swiper .swiper-pagination-bullet {width:16px;border-radius:4px;transition: width .3s}
+.key-visual-swiper .swiper-pagination-bullet-active {width:32px;border-radius:4px;transition: width .3s}
+
 :root {--swiper-theme-color: #ffffff !important;}
