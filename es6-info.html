@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('ECMAscript2015(es6)');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">ECMAscript란 무엇인가?</h2>
+                <p class="desc">ECMA 기관에서 만든 ECMA-262 <em class="fc-yellow">표준</em>을 따르는 스크립트다. <br>
+                    2015년도 버전을 줄여서 es6라고 한다.<br>
+                </p>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">ES6를 사용하는 이유</h3>
+                    <p class="desc">다른 버전에 비해 <em class="fc-yellow">많은 시간과 많은 API 및 편의 기능을 제공</em>하기 때문에 사용한다.</p>
+                </section>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">ES6를 사용 방법</h3>
+                    <p class="desc">
+                        외부의 JS파일을 따로 불러와서 사용하는 것이 아니라 ES6 문법을 그냥 사용 하면된다. <br>
+                        그러나 2022년 현재 아직 <em class="fc-yellow">모든 브라우저에서 es6를 지원하지 않는다.</em> <br>
+                        그래서 ie를 제외한 모든 브라우저가 지원하는 <em class="fc-yellow">es5 버전으로 트랜스파일이 필요</em>하다. <br>
+                        해당 트랜스파일을 하기 이해서는 <em class="fc-yellow">Babel</em>을 같이 사용 해야한다. <br>
+                        또한 es6에는 대체 할 수 없는 함수가 존재하기 때문에 이름 채워 줄 수 있는 polyfill을 같이 사용 해야한다.<br>
+                        <em class="fc-yellow">Babel</em>은 Webpack, Gulp, Grunt와 같은 자동화 빌드 도구을 사용하거나 CDN으로 불러와서 사용 할 수 있다.<br>
+                    </p>
+                    <h3 class="title fc-blue mb10 pt10 pb10">NPM 모듈 설치</h3>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">npm&nbsp;install&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span><span style="color:#0086b3"></span><span style="color:#ff3399">-</span>save<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>dev&nbsp;@babel<span style="color:#0086b3"></span><span style="color:#ff3399">/</span>core&nbsp;@babel<span style="color:#0086b3"></span><span style="color:#ff3399">/</span>node&nbsp;@babel<span style="color:#0086b3"></span><span style="color:#ff3399">/</span>preset<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>env.</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+
+                    <h3 class="title fc-blue mb10 pt10 pb10">CDN 사용 방법</h3>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>script&nbsp;type<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"text/javascript"</span>&nbsp;src<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">/</span>script<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>script&nbsp;type<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"text/javascript"</span>&nbsp;src<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.10.4/polyfill.min.js"</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">/</span>script<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>script&nbsp;type<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"text/babel"</span>&nbsp;src<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"사용자스크립트URI"</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">/</span>script<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>
