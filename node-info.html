@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('NodeJS 정의 및 NPM 명령어 모음');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">NodeJs란 무엇인가</h2>
+                <p class="desc">Node.js는 구글 크롬의 V8 javascript 엔진으로 빌드 된 javascript 런타임이다. <br>
+                    Node.js를 통해 세계 최대의 오픈 소스 라이브러리르 보유하고 있는 npm 생태계에 접근을 할 수 있다. <br>
+                    Node.js를 설치하면 npm은 자동으로 설치되어 사용 가능하다. <br>
+                    Terminal, PowerShell, Command mode에서 사용이 가능하다.
+                </p>
+                <p class="reply-box plus-desc mt10"><em>자바스크립 런타임이란? : </em>특정 언어로 만든 프로그램을 실행할 수 있게 하는 환경을 말한다. <br>결국 자바스크립트 언어를 실행할 수 있는 실행기라 할 수 있다.</p>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">NPM 명령어 정리 <a href="https://www.npmjs.com/" class="btn btn-round bg-primary floating-right" target="_blank" >NPM 사이트 바로가기</a></h3>
+
+                    <div class="table-wrap col-style">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">명령어</th>
+                                    <th scope="col">설명</th>
+                                    <th scope="col">기타</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">init</em></td>
+                                    <td>package.json 파일 생성</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">help</em></td>
+                                    <td>npm 전체 명령어에 대한 정보 확인.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm 명령어 <em class="fc-yellow">help</em></td>
+                                    <td>npm 특정 명령어에 대한 정보 확인.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">install</em></td>
+                                    <td>npm 특정 모듈을 로컬에 설치.</td>
+                                    <td class="tac" rowspan="3">
+                                        <em class="fc-yellow">--save or -S</em> : dependencies에 추가 <br>
+                                        <em class="fc-yellow">--save-dev or -D</em> : devDependencies에 추가 <br>
+                                        <em class="fc-yellow">-g</em> : global 패키지에 추가
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">i</em></td>
+                                    <td>┗ 축약 버전.</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">uninstall</em> 설치한 모듈명</td>
+                                    <td>npm 특정 모듈을 로컬에서 삭제.</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">update</em></td>
+                                    <td>전체 모듈 버전 업데이트.<p class="reply-box warning mt10"><i class="icon icon-warring-red"></i><em>주의 : </em>모듈들의 버전 호환성 문제가 있어서 호환성을 확인하고 사용해야 한다.</p></td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">dedupe</em></td>
+                                    <td>중복된 모듈 정리</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">root</em></td>
+                                    <td>node_modules 폴더의 위치를 알려준다.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">cache</em></td>
+                                    <td>npm 내의 cache 목록 확인</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">cache clean</em></td>
+                                    <td>cache 삭제</td>
+                                    <td class="tac">오류 발생시 자주 사용.</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">-version</em></td>
+                                    <td>버전 확인.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">-v</em></td>
+                                    <td>┗ 축약 버전.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">prune</em></td>
+                                    <td>package.json 파일 내에 정의 되지 않은 모듈 삭제.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">start</em></td>
+                                    <td>package.json의 scripts에 있는 start 정의했다면 명령어를 실행.</td>
+                                    <td class="tac">scripts에 정의하지 않으면 node server.js가 실행</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">stop</em></td>
+                                    <td>실행 중인 npm을 중지.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">restart</em></td>
+                                    <td>실행 중인 npm을 stop 이후 start 실행.</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">run</em></td>
+                                    <td>package.json의 scripts에 정의 해서 사용.</td>
+                                    <td class="tac">npm run 명령어 </td>
+                                </tr>
+                                <tr>
+                                    <td>npm <em class="fc-yellow">config</em></td>
+                                    <td>npm 설정 조작</td>
+                                    <td class="tac">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="https://velog.io/@archivvonjang/npm-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC" class="btn mt20" target="_blank">출처 바로가기</a>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>

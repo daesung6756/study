@@ -80,7 +80,7 @@ const include = {
                 + '</li>'
                 + '<li><div class="nav-group-title">NodeJS<button type="button" class="toggle-btn type2" data-toggle="gnbListGroup4"></button></div>'
                 + '<ul class="toggle-box" data-toggle-box="gnbListGroup4">'
-                + '<li><a href="node-info.html">NodeJS란?</a></li>'
+                + '<li><a href="node-info.html">NodeJS 정의 및 NPM 명령어 모음</a></li>'
                 + '</ul>'
                 + '</li>'
                 + '</ul>'

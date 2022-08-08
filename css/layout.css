@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+.section{font-size:.7rem;}
+
 /* column layout */
 .flex-wrap {display:flex;justify-content: space-between}
 .flex-wrap .n2{width:50%;}
@@ -28,7 +30,7 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 
 .overlay-nav-open-btn,
 .overlay-nav-close-btn {position:relative;background:transparent;border:0;padding:0;}
-.overlay-nav-open-btn:before {content:'백틱 토글';position:absolute;top:0;min-width:30px;left:100%;margin-left:16px;padding:8px;background: #ff522b;color:#fff;line-height:1.1;border-radius:10px;animation: callBell 1s ease-in-out infinite;}
+.overlay-nav-open-btn:before {content:'백틱 토글';position:absolute;top:0;min-width:30px;left:100%;margin-left:14px;padding:8px;background: #ff522b;color:#fff;line-height:1.1;border-radius:10px;animation: callBell 1s ease-in-out infinite;}
 .overlay-nav-open-btn:after {content:'';position:absolute;top:10px;left:100%;width:0;height:0;margin-left:6px;border-top: 5px solid transparent;border-right: 10px solid #ff522b;border-bottom: 5px solid transparent}
 .overlay-nav-open-btn .icon{width:24px;height:24px;}
 .overlay-nav-close-btn .icon{width:20px;height:20px;}
