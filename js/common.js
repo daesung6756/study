@@ -1,8 +1,6 @@
 'use strict'
 
 
-
-
 document.addEventListener("DOMContentLoaded", function(){
 
     const UI = {
@@ -26,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function(){
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : none');
             this.popupElements.length > 0 ? this.popups() : console.log('data-popup length : none');
             this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : none');
+            this.descListCount();
+            this.scrollSticky();
             this.scrollTopView();
             this.scrollTopClickEvent();
         },
@@ -89,6 +89,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 });
 
             });
+        },
+        scrollSticky : function () {
+            this.html.scrollTop > this.header.clientHeight ? this.header.classList.add('is-fixed') : this.header.classList.remove('is-fixed');
         },
         scrollTopView: function (){
             const scrollWrap = document.querySelector('.scroll-top-wrap');
@@ -156,11 +159,20 @@ document.addEventListener("DOMContentLoaded", function(){
             this.body.classList.remove('is-fixed');
             this.body.querySelector('.dimmed').remove();
             this.isDimmed = null;
+        },
+        descListCount : function () {
+            const count = document.querySelector('#descCount');
+            const list = document.querySelector('#descList');
+            const dts = list.querySelectorAll('dt');
+            const total = dts.length ;
+
+            count.querySelector('.count').innerHTML = total + " 개";
         }
     }
     UI.init();
 
     document.addEventListener('scroll', function(){
+        UI.scrollSticky();
         UI.scrollTopView();
     });
 });

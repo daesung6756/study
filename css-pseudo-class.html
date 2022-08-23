@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('CSS3');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">CSS ::Pseudo-class</h2>
+                <p class="desc">- CTRL + T 를 누르면 검색 가능.</p>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">CSS ::Pseudo-class 목록.<span class="count-wrap" id="descCount">개수 : <span class="count"></span></span></h3>
+                    <dl class="desc-list" id="descList">
+
+                        <dt>::<em class="fc-yellow">after</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleAfter" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleAfter">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>::<em class="fc-yellow">before</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleBefore" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleBefore">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>::<em class="fc-yellow">first-letter</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFirstletter" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFirstletter">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>::<em class="fc-yellow">first-line</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFristline" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFristline">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>::<em class="fc-yellow">placeholder</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassTogglePlaceholder" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassTogglePlaceholder">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>::<em class="fc-yellow">selection</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleSelection" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleSelection">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">active</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleActive" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleActive">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">blank</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleBlank" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleBlank">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">checked</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleChecked" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleChecked">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">default</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleDefault" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleDefault">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">dir</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleDir" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleDir">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">disabled</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleDisabled" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleDisabled">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">empty</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleEmpty" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleEmpty">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">enabled</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleEnabled" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleEnabled">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">first</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFirst" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFirst">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">first-child</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFirstchild" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFirstchild">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">first-of-type</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFirstoftype" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFirstoftype">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">focus</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFocus" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFocus">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">fullscreen</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleFullscreen" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleFullscreen">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">hover</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleHover" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleHover">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">in-range</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleInrange" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleInrange">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">indeterminate</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleIndeterminate" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleIndeterminate">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">invalid</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleInvalid" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleInvalid">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">lang</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleLang" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleLang">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">last-child</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleLastchild" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleLastchild">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">last-of-type</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleLastoftype" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleLastoftype">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">left</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleLeft" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleLeft">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">link</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleLink" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleLink">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">not</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleNot" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleNot">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">nth-child</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleNthchild" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleNthchild">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">nth-last-child</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleNthlastchild" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleNthlastchild">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">nth-last-of-type</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleNthlastoftype" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleNthlastoftype">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">nth-of-type</em>()<button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleNthoftype" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleNthoftype">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">only-child</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleOnlychild" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleOnlychild">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">only-of-type</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleOnlyoftype" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleOnlyoftype">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">optional</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleOptional" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleOptional">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">out-of-range</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleOutofrange" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleOutofrange">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">read-only</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleReadonly" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleReadonly">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">read-write</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleReadWrite" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleReadWrite">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">required</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleRequired" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleRequired">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">right</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleRight" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleRight">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">root</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleRoot" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleRoot">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">scope</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleScope" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleScope">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">target</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleTarget" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleTarget">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">valid</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleValid" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleValid">
+                            <p>-</p>
+                        </dd>
+
+                        <dt>:<em class="fc-yellow">visited</em><button type="button" class="toggle-btn" data-toggle="cssPseudoClassToggleVisited" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPseudoClassToggleVisited">
+                            <p>-</p>
+                        </dd>
+                    </dl>
+
+                    <a href="https://tympanus.net/codrops/css_reference/#section_css-pseudo-class" class="btn mt20" target="_blank">출처 바로가기</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>

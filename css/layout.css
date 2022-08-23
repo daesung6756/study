@@ -11,6 +11,9 @@ blockquote.box-design {border:1px solid #ddd;background:#f6f6f6;padding:16px;lin
 
 .theme-dark blockquote.box-design {border:1px solid #333;background:#505050;color:#ddd;}
 
+/* list count */
+.count-wrap {position:absolute;top:50%;right:0;transform: translateY(-50%);font-size:.6rem;color: #787878;}
+
 /* loading-bar */
 .loading-bar {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:flex;align-items: center;justify-content: center;z-index:100;}
 .loading-bar > svg {width:60px;height:60px;}

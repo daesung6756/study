@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('CSS Property');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">CSS Property</h2>
+                <p class="desc">- CTRL + T 를 누르면 검색 가능.</p>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">CSS Property 목록.<span class="count-wrap" id="descCount">개수 : <span class="count"></span></span></h3>
+                    <dl class="desc-list" id="descList">
+
+                        <!-- A -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">A</i></span><em class="fc-yellow">all</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAll" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAll">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimation" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimation">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-delay</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationdelay" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationdelay">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-direction</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationdirection" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationdirection">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-duration</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationduration" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationduration">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-fill-mode</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationfillmode" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationfillmode">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-iteration-count</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationiterationcount" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationiterationcount">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-name</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationname" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationname">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-play-state</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationplaystate" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationplaystate">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">animation-timing-function</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAnimationtimingfunction" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAnimationtimingfunction">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">appearance</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleAppearance" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleAppearance">
+                            <p>-</p>
+                        </dd>
+                        <!--// A -->
+
+                        <!-- B -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">B</i></span><em class="fc-yellow">backdrop-filter</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackdropfilter" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackdropfilter">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">backface-visibility</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackfacevisibility" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackfacevisibility">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackground" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackground">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-attachment</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundattachment" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundattachment">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-blend-mode</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundblendmode" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundblendmode">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-clip</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundclip" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundclip">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundcolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundcolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-image</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundimage" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundimage">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-origin</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundorigin" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundorigin">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-position</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundposition" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundposition">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-repeat</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundrepeat" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundrepeat">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">background-size</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBackgroundsize" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBackgroundsize">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorder" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorder">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottom" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottom">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottomcolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottomcolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom-left-radius</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottomleftradius" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottomleftradius">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom-right-radius</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottomrightradius" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottomrightradius">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottomstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottomstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-bottom-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderbottomwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderbottomwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-collapse</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordercollapse" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordercollapse">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordercolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordercolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-image</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimage" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimage">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-image-outset</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimageoutset" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimageoutset">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-image-repeat</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimagerepeat" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimagerepeat">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-image-slice</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimageslice" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimageslice">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-image-source</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimagesource" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimagesource">
+                            <p>-</p>
+                        </dd>
+                        <dt><em class="fc-yellow">border-image-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderimagewidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderimagewidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-left</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderleft" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderleft">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-left-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderleftcolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderleftcolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-left-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderleftstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderleftstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-left-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderleftwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderleftwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-radius</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderradius" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderradius">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-right</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderright" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderright">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-right-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderrightcolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderrightcolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-right-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderrightstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderrightstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-right-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderrightwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderrightwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-spacing</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderspacing" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderspacing">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertop" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertop">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertopcolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertopcolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top-left-radius</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertopleftradius" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertopleftradius">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top-right-radius</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertoprightradius" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertoprightradius">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertopstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertopstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-top-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBordertopwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBordertopwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">border-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBorderwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBorderwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">bottom</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBottom" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBottom">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">box-shadow</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBoxshadow" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBoxshadow">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">box-sizing</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBoxsizing" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBoxsizing">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">break-after</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBreakafter" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBreakafter">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">break-inside</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleBreakinside" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleBreakinside">
+                            <p>-</p>
+                        </dd>
+                        <!--// B -->
+
+                        <!-- C -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">C</i></span><em class="fc-yellow">caption-side</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleCaptionside" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleCaptionside">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">clear</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleClear" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleClear">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">clip</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleClip" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleClip">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">clip-path</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleClippath" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleClippath">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-count</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumncount" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumncount">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-fill</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnfill" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnfill">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-gap</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumngap" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumngap">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-rule</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnrule" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnrule">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-rule-color</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnrulecolor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnrulecolor">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-rule-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnrulestyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnrulestyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-rule-width</em><button type="button" class="toggle-btn" data-toggle="csspropertytoggleColumnrulewidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="csspropertytoggleColumnrulewidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-span</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnspan" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnspan">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">column-width</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumnwidth" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumnwidth">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">columns</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleColumns" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleColumns">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">counter-increment</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleCounterincrement" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleCounterincrement">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">counter-reset</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleCounterreset" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleCounterreset">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">cursor</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleCursor" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleCursor">
+                            <p>-</p>
+                        </dd>
+                        <!--// C -->
+
+                        <!-- D -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">D</i></span><em class="fc-yellow">direction</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleDirection" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleDirection">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">display</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleDisplay" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleDisplay">
+                            <p>-</p>
+                        </dd>
+                        <!--// D -->
+
+                        <!-- E -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">E</i></span><em class="fc-yellow">empty-cells</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+                        <!--// E -->
+
+                        <!-- F -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">F</i></span><em class="fc-yellow">filter</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFilter" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFilter">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">float</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFloat" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFloat">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFont" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFont">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-family</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontfamily" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontfamily">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-size</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontsize" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontsize">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-size-adjust</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontsizeadjust" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontsizeadjust">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-stretch</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontstretch" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontstretch">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontstyle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontstyle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-synthesis</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontsynthesis" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontsynthesis">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-variant</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontvariant" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontvariant">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">font-weight</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleFontweight" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleFontweight">
+                            <p>-</p>
+                        </dd>
+                        <!--// F -->
+
+                        <!-- H -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">H</i></span><em class="fc-yellow">hanging-punctuation</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleHangingpunctuation" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleHangingpunctuation">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">height</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleHeight" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleHeight">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">hyphens</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleHyphens" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleHyphens">
+                            <p>-</p>
+                        </dd>
+                        <!--// H -->
+
+                        <!-- I -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">I</i></span><em class="fc-yellow">isolation</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleIsolation" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleIsolation">
+                            <p>-</p>
+                        </dd>
+                        <!--// I -->
+
+                        <!-- J -->
+                        <!--// J -->
+                        <!-- K -->
+                        <!--// K -->
+
+                        <!-- L -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">L</i></span><em class="fc-yellow">left</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleLeft" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleLeft">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">letter-spacing</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggleLetterspacing" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggleLetterspacing">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">line-height</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">list-style</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">list-style-image</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">list-style-position</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">list-style-type</em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+                        <!--// L -->
+
+                        <!-- M -->
+                        <dt><span class="sorting-circle"><i class="sorting-icon">M</i></span><em class="fc-yellow"></em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+                        <!--// M -->
+
+                        <!-- N -->
+                        <!--// N -->
+                        <!-- O -->
+                        <!--// O -->
+                        <!-- P -->
+                        <!--// P -->
+                        <!-- Q -->
+                        <!--// Q -->
+                        <!-- R -->
+                        <!--// R -->
+                        <!-- S -->
+                        <!--// S -->
+                        <!-- T -->
+                        <!--// T -->
+                        <!-- U -->
+                        <!--// U -->
+                        <!-- V -->
+                        <!--// V -->
+                        <!-- W -->
+                        <!--// W -->
+                        <!-- X -->
+                        <!--// X -->
+                        <!-- Y -->
+                        <!--// Y -->
+                        <!-- Z -->
+                        <!--// Z -->
+
+
+                        <dt><em class="fc-yellow"></em><button type="button" class="toggle-btn" data-toggle="cssPropertyToggle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssPropertyToggle">
+                            <p>-</p>
+                        </dd>
+
+
+                    </dl>
+
+                    <a href="https://tympanus.net/codrops/css_reference/#section_css-property" class="btn mt20" target="_blank">출처 바로가기</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>

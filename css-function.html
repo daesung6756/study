@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('CSS Function');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">CSS Function</h2>
+                <p class="desc">- CTRL + T 를 누르면 검색 가능.</p>
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">CSS Function 목록. <span class="count-wrap" id="descCount">개수 : <span class="count"></span></span></h3>
+                    <dl class="desc-list" id="descList">
+                        <dt><em class="fc-yellow">attr</em>() <button type="button" class="toggle-btn" data-toggle="cssFunctionToggleAttr" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleAttr">
+                            <p>지정한 요소의 속성 값을 문자열로 반환 하는 함수.</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">calc</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleCalc" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleCalc">
+                            <p>+, - , / , * 같은 수학적 표현식을 연산하여 반환하는 함수.</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">circle</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleCircle" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleCircle">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">ellipse</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleEllipse" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleEllipse">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">hsl</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleHsl" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleHsl">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">hsla</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleHsla" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleHsla">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">inset</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleInset" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleInset">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">linear-gradient</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleLinearGradient" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleLinearGradient">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">matrix</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleMatrix" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleMatrix">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">matrix3d</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleMatrix3d" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleMatrix3d">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">polygon</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionTogglePolygon" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionTogglePolygon">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">radial-gradient</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRadialGradient" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRadialGradient">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">repeating-linear-gradient</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRepeatinglinearGradient" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRepeatinglinearGradient">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">repeating-radial-gradient</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRepeatingRadialGradient" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRepeatingRadialGradient">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rgb</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRgb" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRgb">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rgba</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRgba" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRgba">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rotate</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRotate" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRotate">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rotate3d</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRotate3d" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRotate3d">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rotateX</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRotatex" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRotatex">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rotateY</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRotatey" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRotatey">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">rotateZ</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleRotatez" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleRotatez">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">skew</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleSkew" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleSkew">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">skewX</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleSkewx" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleSkewx">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">skewY</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleSkewy" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleSkewy">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">translate</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleTranslate" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleTranslate">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">translate3d</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleTranslate3d" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleTranslate3d">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">translateX</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleTranslatex" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleTranslatex">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">translateY</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleTranslatey" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleTranslatey">
+                            <p>-</p>
+                        </dd>
+
+                        <dt><em class="fc-yellow">translateZ</em>()<button type="button" class="toggle-btn" data-toggle="cssFunctionToggleTranslatez" title="토글 박스 열기/닫기">버튼</button></dt>
+                        <dd class="toggle-box" data-toggle-box="cssFunctionToggleTranslatez">
+                            <p>-</p>
+                        </dd>
+                    </dl>
+
+                    <a href="https://tympanus.net/codrops/css_reference/" class="btn mt20" target="_blank">출처 바로가기</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>
