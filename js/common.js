@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
         body : document.body,
         loader : document.querySelector('#loader'),
         header : document.querySelector('#header'),
+        count : document.querySelector('#descCount'),
         overlayNavElements : document.querySelectorAll('[data-overlay]'),
         popupElements : document.querySelectorAll('[data-popup]'),
         toggleBoxElements : document.querySelectorAll('[data-toggle]'),
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
             this.overlayNavElements.length > 0 ? this.overlayNav() : console.log('data-overlay length : none');
             this.popupElements.length > 0 ? this.popups() : console.log('data-popup length : none');
             this.toggleBoxElements.length > 0 ? this.toggleBox() : console.log('data-toggle length : none');
-            this.descListCount();
+            this.count ? this.descListCount() : false ;
             this.scrollSticky();
             this.scrollTopView();
             this.scrollTopClickEvent();
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
         overlayNav : function () {
             for(let [index , value ] of this.overlayNavElements.entries()){
                 this.overlayNavGroup.push(value.dataset.overlay)
-            };
+            }
             this.overlayNavGroup.map( value => {
                 const open = document.querySelector('[data-overlay-open=' + value +']');
                 const close = document.querySelector('[data-overlay-close=' + value +']');
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
         popups : function () {
             for(let [index , value ] of this.popupElements.entries()){
                 this.popupGroup.push(value.dataset.popup);
-            };
+            }
 
             this.popupGroup.map( value => {
                 const open = document.querySelector('[data-popup-open=' + value + ']');
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 for(let [index , element ] of closeGroup.entries()) {
                     element.addEventListener('click', () => this.useDimmedClose( value ,'popup', 'is-on'));
-                };
+                }
 
                 open.addEventListener('click', () => this.useDimmedOpen( value ,'popup', 'is-on'));
 
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
         toggleBox : function () {
             for(let [index , value ] of this.toggleBoxElements.entries()){
                 this.toggleBoxGroup.push(value.dataset.toggle);
-            };
+            }
             this.toggleBoxGroup.map( value => {
                 const btn = document.querySelector('[data-toggle=' + value + ']');
                 const box = document.querySelector('[data-toggle-box=' + value + ']');
@@ -161,14 +162,13 @@ document.addEventListener("DOMContentLoaded", function(){
             this.isDimmed = null;
         },
         descListCount : function () {
-            const count = document.querySelector('#descCount');
             const list = document.querySelector('#descList');
-            const dts = list.querySelectorAll('dt');
-            const total = dts.length ;
+            const total = list.querySelectorAll('dt').length ;
 
-            count.querySelector('.count').innerHTML = total + " 개";
+            this.count.querySelector('.count').innerHTML = total + " 개";
         }
     }
+
     UI.init();
 
     document.addEventListener('scroll', function(){

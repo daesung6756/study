@@ -16,8 +16,11 @@ html, body {min-width:320px;line-height:1.4}
 .main.is-wide .content > .inner {padding:0;}
 .footer {background:#333}
 .footer .inner{padding:5rem 1rem 5rem}
+.footer p,
+.footer address {font-size:.9rem;color:#666}
 .dimmed {position:fixed;top:0;left:0;width:100%;height:100%;background: rgba(0,0,0,.3);z-index:10;}
 .blind {position:absolute;width:1px;height:1px;border:0;clip:rect(1px, 1px, 1px, 1px);overflow:hidden;z-index:-1;}
+.img > img {display:block;max-width: 100%;}
 
 /* scroll bar */
 /* width */

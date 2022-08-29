@@ -63,8 +63,8 @@ const include = {
                 + '<ul class="toggle-box" data-toggle-box="gnbListGroup1">'
                 + '<li><a href="javascript-info.html">바닐라 자바스크립란?</a></li>'
                 + '<li><a href="this.html">this의 개념</a></li>'
-                + '<li><a href="function.html">자바스크립트 함수의 종류 및 정의</a></li>'
-                + '<li><a href="built-in-function.html">자바스크림트 내장 함수</a></li>'
+                + '<li><a href="function.html">함수의 종류 및 정의</a></li>'
+                + '<li><a href="built-in-function.html">내장 함수</a></li>'
                 + '<li><a href="array-prototype.html">Array (배열)</a></li>'
                 + '<li><a href="https://demo.tutorialzine.com/2015/08/how-to-control-youtubes-video-player-with-javascript/" target="_blank">[작업 사례] 유튜브 플레이어 스크립트 제어</a></li>'
                 + '</ul>'
@@ -73,6 +73,8 @@ const include = {
                 + '<li><div class="nav-group-title">ECMAscript2015(es6)<button type="button" class="toggle-btn type2" data-toggle="gnbListGroup2"></button></div>'
                 + '<ul class="toggle-box" data-toggle-box="gnbListGroup2">'
                 + '<li><a href="es6-info.html">ECMAscript란?</a></li>'
+                + '<li><a href="es6-variable.html">const, let, var</a></li>'
+                + '<li><a href="es6-template-literals.html">탬플릿 리터럴(template literals)</a></li>'
                 + '</ul>'
                 + '</li>'
                 + '<li><div class="nav-group-title">HTML<button type="button" class="toggle-btn type2" data-toggle="gnbListGroup3"></button></div>'
@@ -146,7 +148,11 @@ const include = {
             var render =
                 '<!-- FOOTER : START -->'
                 + '<footer id="footer" class="footer">'
-                + '<div class="inner">이곳은 푸터 입니다.</div>'
+                + '<div class="inner">'
+                + '<p>Concentrix Services Korea Ltd <br>Digital-Design team </p>'
+                + '<address>5th Fl., NC Tower I 509, Taeheran-ro, 06169 Gangnam-Gu Seoul Korea, Republic of</address>'
+                + '<p>@copyright Leeds</p>'
+                + '</div>'
                 + '</footer>'
                 + '<!--//FOOTER : END -->';
             return render;

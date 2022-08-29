@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('es6 const, let, var');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">const, let, var에 대해 알아보자.</h2>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">변수의 생성 과정</h3>
+                    <div class="desc">
+                        <em class="fc-yellow">초기화부터 선언 직전까지의 영역을 템프롤 데드 존(Temporal dead zone,TDZ)</em>라고 하며,
+                        <br>이 영역을 통해 const와 let에서 사용 상태를 체크하고 레퍼런스 에러를 전달 한다.
+                        <br>조건은 아래와 같다.
+                        <div class="flex-wrap mt30">
+                            <div class="column n3">
+                                <em class="fc-yellow">const</em>
+                                <ol>
+                                    <li>1. (선언 + 초기화 + 할당) 단계</li>
+                                </ol>
+                            </div>
+                            <div class="column n3">
+                                <em class="fc-yellow">let</em>
+                                <ol>
+                                    <li>1. 선언 단계</li>
+                                    <li>2. 초기화 단계</li>
+                                    <li>3. 할당 단계</li>
+                                </ol>
+                            </div>
+                            <div class="column n3">
+                                <em class="fc-yellow">var</em>
+                                <ol>
+                                    <li>1. 선언 + 초기화 단계</li>
+                                    <li>2. 할당 단계</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">호이스팅(hoisting) 이란?</h3>
+                    <p class="desc">자바스크립트 엔진이 처음 시작할때, <em class="fc-yellow">변수명이나 함수명을 scope 내에서 최상위로 이동</em>시키는 현상이다.</p>
+                    <div class="flex-wrap mt30">
+                        <div class="column n2 pr10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">const, let</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;선언&nbsp;전에&nbsp;값을&nbsp;호출할&nbsp;경우</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">let</span>&nbsp;test&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'철수'</span>;&nbsp;<span style="color:#999999">//&nbsp;선언</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;호이스팅&nbsp;되는&nbsp;과정</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">let</span>&nbsp;test;&nbsp;<span style="color:#999999">//&nbsp;호이스팅</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;1.&nbsp;선언</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;2.&nbsp;레퍼런스&nbsp;에러&nbsp;(&nbsp;초기화&nbsp;x&nbsp;,TDZ)</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="column n2 pl10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">var</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;선언&nbsp;전에&nbsp;값을&nbsp;호출할&nbsp;경우</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;test&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'철수'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;호이스팅&nbsp;되는&nbsp;과정</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;test;&nbsp;<span style="color:#999999">//&nbsp;호이스팅</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;1.&nbsp;선언&nbsp;+&nbsp;초기화</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;2.&nbsp;undefined&nbsp;출력&nbsp;(&nbsp;할당&nbsp;x&nbsp;)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">test&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'철수'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;3.&nbsp;변수에&nbsp;값을&nbsp;할당</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">const, let vs var</h3>
+                    <p class="desc">const, let 과 var의 차이는 아래와 같다.</p>
+                    <div class="flex-wrap mt30">
+                        <div class="column n2 pr10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">const, let</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;1.&nbsp;선언&nbsp;전에&nbsp;변수를&nbsp;호출할&nbsp;경우&nbsp;(레퍼런스&nbsp;오류)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;오류가&nbsp;발생하는&nbsp;원인은&nbsp;초기화가&nbsp;되지&nbsp;않았기&nbsp;때문이다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;꼭&nbsp;선언&nbsp;후&nbsp;사용하고,&nbsp;오류로&nbsp;인해&nbsp;원인&nbsp;파악이&nbsp;쉽다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test1);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;Cannot&nbsp;access&nbsp;'test1'&nbsp;before&nbsp;initialization</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;test1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'철수'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;2.&nbsp;동일한&nbsp;변수명을&nbsp;사용할&nbsp;경우&nbsp;(구문&nbsp;오류)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;동일한&nbsp;변수명은&nbsp;사용할&nbsp;수&nbsp;없고,&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;오유로&nbsp;인해&nbsp;원인&nbsp;파악이&nbsp;쉽다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">let</span>&nbsp;test2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'영희'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">let</span>&nbsp;test2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'길동'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;Identifier&nbsp;'test2'&nbsp;has&nbsp;already&nbsp;been&nbsp;declared</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="column n2 pl10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">var</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;1.&nbsp;선언&nbsp;전에&nbsp;변수를&nbsp;호출할&nbsp;경우&nbsp;(undefined&nbsp;출력)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;오류가&nbsp;발생하지&nbsp;않아,&nbsp;문제를&nbsp;인지하기가&nbsp;어렵다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test1);&nbsp;<span style="color:#999999">//&nbsp;undefined</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;test1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'철수'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;2.&nbsp;동일한&nbsp;변수명을&nbsp;사용할&nbsp;경우.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;동일한&nbsp;변수명을&nbsp;사용할&nbsp;수&nbsp;있어서,</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;다른&nbsp;로직의&nbsp;변수명과&nbsp;겹칠&nbsp;경우</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;값이&nbsp;다르게&nbsp;나오는데&nbsp;어디서&nbsp;문제가&nbsp;있는지</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;찾기&nbsp;어렵다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;test1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'영희'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(test1);&nbsp;<span style="color:#999999">//&nbsp;영희&nbsp;-&nbsp;마지막&nbsp;할당값이&nbsp;출력</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">변수의 scope</h3>
+                    <p class="desc">const, let은 <em class="fc-yellow">block-level-scope</em>이고, var는 <em class="fc-yellow">function-level-scope</em> 이다.
+                    </p>
+                    <div class="flex-wrap mt30">
+                        <div class="column n3 pr10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">block-level-scope</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;const,&nbsp;let</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;(함수,&nbsp;if&nbsp;문,&nbsp;for&nbsp;문,&nbsp;while&nbsp;문,&nbsp;try/catch&nbsp;문&nbsp;등)</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;외부에서&nbsp;접근&nbsp;불가</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;지역&nbsp;변수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">const</span>&nbsp;test1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">"내부"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">let</span>&nbsp;test2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">"내부"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'block&nbsp;내부1&nbsp;:&nbsp;'</span>,&nbsp;test1);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//block&nbsp;내부1&nbsp;:&nbsp;&nbsp;내부</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'block&nbsp;내부2&nbsp;:&nbsp;'</span>,&nbsp;test2);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//block&nbsp;내부2&nbsp;:&nbsp;&nbsp;내부</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'block&nbsp;외부2&nbsp;:&nbsp;'</span>,&nbsp;test1);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;Uncaught&nbsp;ReferenceError:&nbsp;test1&nbsp;is&nbsp;not&nbsp;defined</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'block&nbsp;외부3&nbsp;:&nbsp;'</span>,&nbsp;test2);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;Uncaught&nbsp;ReferenceError:&nbsp;test2&nbsp;is&nbsp;not&nbsp;defined</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="column n3 pl10">
+                            <dl class="dl-list">
+                                <dt class="title mb20">function-level-scope</dt>
+                                <dd>
+                                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;var</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;testFunction&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;외부에서&nbsp;접근&nbsp;불가</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;지역&nbsp;변수</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">var</span>&nbsp;test3&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">"내부"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'function&nbsp;내부3&nbsp;:&nbsp;'</span>,&nbsp;test3)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//function&nbsp;내부&nbsp;:&nbsp;내부</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">testFunction();&nbsp;<span style="color:#999999">//&nbsp;함수&nbsp;실행</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">'function&nbsp;외부3&nbsp;:&nbsp;'</span>,&nbsp;test3);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;Uncaught&nbsp;ReferenceError:&nbsp;test3&nbsp;is&nbsp;not&nbsp;defined</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">var보다 const, let을 사용해야 하는 이유</h3>
+                    <p class="desc">변수의 생성과정을 보면 var는 선언과 초기화가 동시에 이루어지기 때문에 TDZ영역에서 거를 수가 없다.
+                        <br>그렇기 때문에 변수 호출 위치에 문제가 생겼거나, 동일한 변수명을 다른 js 파일에서 사용할 때 인지하기가 어렵다.
+                        <br>const, let을 사용하면 동일 변수명을 사용하거나, 호출 위치상에 문제가 생길 경우, 바로 에러를 콘솔 창에 보여주기때문에.
+                        <br>유지 보수가 더 쉽다.
+                        <br>그렇다고 var를 절대 사용하면 안되는 것은 아니다.
+                        <br>const, let으로 풀기에는 어려운 부분이 아직 존재하기 때문이다.
+                        <br>그래서 상황에 맞게 적절하게 사용해야 한다.
+                    </p>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">많은 사람들이 let보다 const를 사용하는 이유</h3>
+                    <p class="desc">const는 '상수라서 값을 바꿀 수 없다.' 라는 해설 때문에 많은 사람들이 오해를 한다.
+                        <br>const라는 변수는 레퍼런스를 담기 때문에 레퍼런스 자체가 변하지 않는 것이다.
+                        <br>예를 들어 함수를 담았다고 가정하면, 함수라는 레퍼런스 자체가 변하지 않는 것이지 내부의 값은 바꿀 수 있다.
+                        <br>그렇기 때문에 let에서는 값이 하나로 정해져있는 원시형 자료(string, number, boolen 등) 용도로 사용하고,
+                        <br>const는 원시형을 제외한 많은 부분에 사용된다.
+                    </p>
+                </section>
+
+            </div>
+        </main>
+    </div>
+<script>
+/*{
+// 선언 전에 값을 호출할 경우
+console.log(test);
+let test = '철수'; // 선언
+
+// 호이스팅 되는 과정
+let test; // 호이스팅
+// 1. 선언
+console.log(test);
+// 2. 레퍼런스 에러 ( 초기화 x ,TDZ)
+
+}*/
+/*{
+// 선언 전에 값을 호출할 경우
+console.log(test);
+var test = '철수';
+
+// 호이스팅 되는 과정
+var test; // 호이스팅
+// 1. 선언 + 초기화
+console.log(test);
+// 2. undefined 출력 ( 할당 x )
+test = '철수'
+// 3. 변수에 값을 할당
+}*/
+/*{
+// 1. 선언 전에 변수를 호출할 경우 (레퍼런스 오류)
+// 오류가 발생하는 원인은 초기화가 되지 않았기 때문이다.
+// 꼭 선언 후 사용하고, 오류로 인해 원인 파악이 쉽다.
+console.log(test1);
+// Cannot access 'test1' before initialization
+const test1 = '철수';
+
+// 2. 동일한 변수명을 사용할 경우 (구문 오류)
+// 동일한 변수명은 사용할 수 없고,
+// 오유로 인해 원인 파악이 쉽다.
+let test2 = '영희';
+let test2 = '길동';
+// Identifier 'test2' has already been declared
+}*/
+{
+// 1. 선언 전에 변수를 호출할 경우 (undefined 출력)
+// 오류가 발생하지 않아, 문제를 인지하기가 어렵다.
+console.log(test1); // undefined
+var test1 = '철수';
+
+// 2. 동일한 변수명을 사용할 경우.
+// 동일한 변수명을 사용할 수 있어서,
+// 다른 로직의 변수명과 겹칠 경우
+// 값이 다르게 나오는데 어디서 문제가 있는지
+// 찾기 어렵다.
+var test1 = '영희';
+console.log(test1); // 영희 - 마지막 할당값이 출력
+}
+
+
+// const, let
+// (함수, if 문, for 문, while 문, try/catch 문 등)
+{
+    // 외부에서 접근 불가
+    // 지역 변수
+    const test1 = "내부";
+    let test2 = "내부";
+    console.log('block 내부1 : ', test1);
+    //block 내부1 :  내부
+    console.log('block 내부2 : ', test2);
+    //block 내부2 :  내부
+}
+console.log('block 외부2 : ', test1);
+// Uncaught ReferenceError: test1 is not defined
+console.log('block 외부3 : ', test2);
+// Uncaught ReferenceError: test2 is not defined
+
+
+// var
+function testFunction () {
+    // 외부에서 접근 불가
+    // 지역 변수
+    var test3 = "내부";
+    console.log('function 내부3 : ', test3)
+    //function 내부 : 내부
+}
+testFunction(); // 함수 실행
+console.log('function 외부3 : ', test3);
+// Uncaught ReferenceError: test3 is not defined
+
+
+</script>
+</div>
+
+</body>
+</html>
