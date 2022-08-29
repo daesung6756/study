@@ -36,6 +36,7 @@ html, body {min-width:320px;line-height:1.4}
 .title {position:relative;}
 .floating-right {position:absolute;right:0;top:50%;transform: translateY(-50%);}
 .btn.floating-right {position:absolute;}
+.btn.floating-right:active {top:0;left:auto;transform: translateY(0);}
 h1 {font-size:24px;font-weight:bold;line-height:1.4;}
 h1.title {position:relative;text-align:center;padding:20px 0;}
 h1.title a {position:absolute;right:0;top:50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);font-size:14px;}
@@ -122,6 +123,11 @@ h3.title-desc {margin-bottom:10px;}
 
 .toggle-box {height:0;overflow: hidden;padding:0;margin:0;}
 .toggle-box.is-show {height:auto;}
+
+/* scroll wrap */
+.scroll-wrap {overflow:hidden;min-width:1023px;}
+.scroll-wrap.dir-x {overflow-x:auto;}
+.scroll-wrap.dir-y {overflow-y:auto;}
 
 /* background-color */
 .bg-white {background:#fff !important;}
