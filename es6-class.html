@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('es6 class');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">class에 대해 알아보자.</h2>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">객체 지향 프로그래밍(OOP)의 장점</h3>
+                    <ol class="desc">
+                        <li>1. 상속을 통해 <em class="fc-yellow">코드 재사용성</em>을 높일 수 있다.</li>
+                        <li>2. 잘 설계된 클래스를 만들어서 독립적인 객체를 사용함으로써 <em class="fc-yellow">생산성을 향상</em>시킬 수 있다.</li>
+                        <li>3. 일상생활의 모습의 구조가 객체에 자연스럽게 녹아 있어서 <em class="fc-yellow">생각하는 것을 그대로 표현</em> 할 수 있다.</li>
+                        <li>4. 프로그램 수정시 추가, 수정을 하더라도 캡슐화를 통해 주변에 영향을 적게 줄 수 있으며, 이때문에 <em class="fc-yellow">유지보수가 매우 쉽고 간편</em>해져 경제적이다.</li>
+                    </ol>
+                    <h3 class="title fc-blue mb10 pt10 pb10">객체 지향 프로그래밍(OOP)의 단점</h3>
+                    <ol class="desc">
+                        <li>1. 객체가 처리하는 것에 대한 명확한 이해가 필요하기때문에 <em class="fc-yellow">설계단계부터 많은 시간이 소모</em> 된다.</li>
+                        <li>2. 객체 지향 언어는 <em class="fc-yellow">대체적으로 실행속도가 느리다</em>.</li>
+                        <li>3. 다중 상속이 지원되는 C++의 경우 너무 복잡해져 코딩의 <em class="fc-yellow">난이도가 상승할 수 있다</em>.</li>
+                    </ol>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">객체 지향 프로그래밍(OOP)의 특징</h3>
+                    <ol class="desc">
+                        <li>- <em class="fc-yellow">캡슐화</em> : 입력값이 문제가 있어도 사용자가 알지 못하도록 처리하는 방법이 캡슐화 이다.</li>
+                        <li>- <em class="fc-yellow">상속</em> : 상속은 말그대로 상위 클래스의 모든 것을 하위 클래스에서 상속받아 사용 할 수 있다.</li>
+                        <li>- <em class="fc-yellow">다향성</em> : 상속과 연관이 있는 개념으로, 다양한 하위 클래스를 정의 할 수 있다.</li>
+                        <li>- <em class="fc-yellow">추상화</em> : 공통 속성과 기능을 추출하고, 필요없는 특성을 제거하는 과정을 말한다.</li>
+                    </ol>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">클래스(class) 란?</h3>
+                    <p class="desc">es6에서 추가된 OOP 클래스(class)문법이다.
+                        <br>이전에는 자바스크립트로 객체 지향 프로그래밍(OOP)을 하려면 prototype 기반으로 생성자 함수를 통해서 할 수 있었다.
+                        <br>es6는 <em class="fc-yellow">클래스 함수를 통해 prototype 방식보다 더 명료하게 객체 지향 프로그래밍</em>을 할 수 있게 되었다.
+                        <br>클래스 역시 일반 함수와 동일하게 <em class="fc-yellow">선언식과 표현식으로 만들 수 있다</em>.
+                        <br>하지만 클래스 함수는 일반 함수와 다르게 선언식, 표현식 둘다 <em class="fc-yellow">호이스팅 되지 않는다</em>.
+                    </p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;클래스&nbsp;선언식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;클래스이름1&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;constructor(parm1,&nbsp;parm2)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm1</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm2</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;클래스&nbsp;표현식</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;클래스이름2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">class</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;constructor(parm1,&nbsp;parm2)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm1</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm2</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">메소드 정의</h3>
+                    <p class="desc">클래스의 몸통은 {}(중괄호)이며, 메소드는 <em class="fc-yellow">class 내부에 정의</em>해야 한다.
+                        <br>클래스 몸통은 <em class="fc-yellow">strict mode(엄격 모드)</em>로 실행된다.
+                        <br>하나의 클래스당 <em class="fc-yellow">생성자 메소드(constructor methods)는 하나만 사용</em> 할 수 있다.
+                    </p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;클래스이름1&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;strict&nbsp;mode</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;메소드들은&nbsp;모든&nbsp;하위&nbsp;클래스에&nbsp;상속&nbsp;할&nbsp;수&nbsp;있다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;한번&nbsp;정의한&nbsp;메소드는&nbsp;많은&nbsp;클래스에서&nbsp;재사용&nbsp;할&nbsp;수&nbsp;있다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;constructor(parm1,&nbsp;parm2)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm1</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.parm2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;parm2</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;메소드1&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">"나는&nbsp;메소드1&nbsp;이다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;메소드2&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">"나는&nbsp;메소드2&nbsp;이다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">오토박싱(Autoboxing)</h3>
+                    <p class="desc"><em class="fc-yellow">this 값이 null 혹은 undefined 일 경우 window 객체로 자동으로 변환</em> 해주는 것을 오토박싱(autoboxing)이라고 한다.
+                        <br>프로토타입 기반의 생성자 함수 에서는 오토박싱(Autoboxing)이 일어나지만,
+                        <br>es6 클래스 기반은 오토박싱(Autoboxing)이 되지 않기 때문에 undefined가 출력 되는 것을 알 수 있다.
+                        <br>메소드를 변수에 저장하여 사용할 경우 this에 유의해서 사용해야 한다.
+                    </p>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">클래스 상속</h3>
+                    <p class="desc">상속은 클래스의 막강한 확장력과 재사용성을 보여준다.</p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;부모의&nbsp;클래스에&nbsp;있는&nbsp;정의&nbsp;된&nbsp;내용을</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;자식&nbsp;클래스에서&nbsp;가져다&nbsp;쓸&nbsp;때&nbsp;extends를&nbsp;사용한다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;생성자&nbsp;함수부터&nbsp;메서드까지&nbsp;모두&nbsp;상속&nbsp;받을&nbsp;수&nbsp;있다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;부모클래스&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;constructor(매개변수)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;이름을&nbsp;서로&nbsp;다르게&nbsp;하지&nbsp;않는&nbsp;이유는</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;굳이&nbsp;다르게&nbsp;쓸&nbsp;필요가&nbsp;없기&nbsp;때문이다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;매개변수;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;speak()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'안녕하세요.'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;자식클래스&nbsp;<span style="color:#ff3399">extends</span>&nbsp;부모클래스&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;speak()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'반갑습니다.'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">super로 부모 클래스 호출하기</h3>
+                    <p class="desc">super 키워드를 사용하여 부모 클래스의 메소드를 호출 할 수 있다.</p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;부모클래스&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;constructor(매개변수)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;매개변수;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;부모메서드1()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'안녕하세요.'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;자식클래스&nbsp;<span style="color:#ff3399">extends</span>&nbsp;부모클래스&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;자식메서드1()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;super를&nbsp;사용하면&nbsp;부모클래스&nbsp;메서드를&nbsp;호출&nbsp;할&nbsp;수&nbsp;있다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">super</span>.부모메서드1();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#4be6fa">this</span>.매개변수&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'반갑습니다.'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <a href="https://beomy.tistory.com/15" class="btn mt50" target="_blank" title="클래스 출처 바로가기">출처 바로가기</a>
+            </div>
+        </main>
+    </div>
+    <script>
+{
+class 클래스이름1 {
+    // strict mode
+    // 메소드들은 모든 하위 클래스에 상속 할 수 있다.
+    // 한번 정의한 메소드는 많은 클래스에서 재사용 할 수 있다.
+    constructor(parm1, parm2) {
+        this.parm1 = parm1
+        this.parm2 = parm2
+    }
+    메소드1 = function() {
+        console.log("나는 메소드1 이다.");
+    }
+    메소드2 = function(){
+        console.log("나는 메소드2 이다.");
+    }
+}
+}
+{
+// 부모의 클래스에 있는 정의 된 내용을
+// 자식 클래스에서 가져다 쓸 때 extends를 사용한다.
+// 생성자 함수부터 메서드까지 모두 상속 받을 수 있다.
+class 부모클래스 {
+    constructor(매개변수) {
+        // 이름을 서로 다르게 하지 않는 이유는
+        // 굳이 다르게 쓸 필요가 없기 때문이다.
+        this.매개변수 = 매개변수;
+    }
+
+    speak() {
+        console.log(this.매개변수 + '안녕하세요.');
+    }
+}
+
+class 자식클래스 extends 부모클래스 {
+    speak() {
+        console.log(this.매개변수 + '반갑습니다.');
+    }
+}
+
+
+}
+{
+class 부모클래스 {
+    constructor(매개변수) {
+        this.매개변수 = 매개변수;
+    }
+
+    부모메서드1() {
+        console.log(this.매개변수 + '안녕하세요.');
+    }
+}
+
+class 자식클래스 extends 부모클래스 {
+    자식메서드1() {
+        // super를 사용하면 부모클래스 메서드를 호출 할 수 있다.
+        super.부모메서드1();
+        console.log(this.매개변수 + '반갑습니다.');
+    }
+}
+}
+    </script>
+</div>
+
+</body>
+</html>

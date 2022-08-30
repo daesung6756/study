@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/include.js"></script>
+    <script>
+        include.head.title('es6 for..of');
+        include.head.meta();
+        include.head.styles.common();
+        include.head.scripts.common();
+    </script>
+</head>
+<body>
+<div class="wrap theme-dark">
+
+    <div id="app">
+        <main class="main">
+            <div class="content pt50 pb50">
+                <h2 class="title fc-orange">for..of 에 대해 알아보자.</h2>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">for..in (es1)</h3>
+                    <p class="desc">for..in 문은 <em class="fc-yellow">객체 순환 방식이라 index 값만 리턴</em>을 한다. <br>value를 얻기위해선 추가적인 작업이 필요하기 때문에 배열 반복문으로는 추천하지 않는다.</p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//for..in</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;names&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'강동'</span>,&nbsp;<span style="color:#ffd500">'미나'</span>,&nbsp;<span style="color:#ffd500">'다미'</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;(<span style="color:#ff3399">let</span>&nbsp;item&nbsp;<span style="color:#ff3399">in</span>&nbsp;names){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(item)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;0,&nbsp;1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">forEach (es5)</h3>
+                    <p class="desc">forEach는 <em class="fc-yellow">배열 순환 방식이고, index와 value 값이 둘다 리턴</em>되지만,
+                        <br>await 사용이 불가하며 for..of를 사용하거나 promise를 대체하여 사용 해야한다.
+                        <br>또한 불필요한 반복을 중지하기 위해서는 추가작업이 필요하기 때문에 코드가 전체적으로 복잡해진다.
+                        <br>es6를 사용 중이라면 배열 반복문으로 추천하지 않는다.</p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//forEach</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;names&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'강동'</span>,&nbsp;<span style="color:#ffd500">'미나'</span>,&nbsp;<span style="color:#ffd500">'다미'</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">names.forEach(<span style="color:#ff3399">function</span>&nbsp;(value,&nbsp;index)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(value);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;철수,&nbsp;영희,&nbsp;길동,&nbsp;강동,&nbsp;미나,&nbsp;다미</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(index);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;0,&nbsp;1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">})</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+                <section class="section mt50">
+                    <h3 class="title fc-blue mb10 pt10 pb10">for..of (es6)</h3>
+                    <p class="desc">for..of는 앞서 말한 반복문들의 부족한 부분이 업그레이드 된 모델이라고 생각하면 된다. <br>value와 index 값이 둘다 리턴이 되고, switch에서 사용했던 break 기능을 사용 할 수 있어서<br>조건에 의해 반복문을 중지하기도 간편하다.</p>
+                    <p class="reply-box mt10"><i class="icon icon-reply-blue"></i><em>나의 생각 : </em> 현직 프론트 엔드 개발자들은 Array methods map() or reduce()를 반복문 대체용으로 많이 사용한다고 한다.<br></p>
+                    <div class="colorscripter-code mt30" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//for..of</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;names&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'철수'</span>,&nbsp;<span style="color:#ffd500">'영희'</span>,&nbsp;<span style="color:#ffd500">'길동'</span>,&nbsp;<span style="color:#ffd500">'강동'</span>,&nbsp;<span style="color:#ffd500">'미나'</span>,&nbsp;<span style="color:#ffd500">'다미'</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;(<span style="color:#ff3399">let</span>&nbsp;[index,&nbsp;value]&nbsp;of&nbsp;names.entries()){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(index);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;0,&nbsp;1,&nbsp;2,&nbsp;3</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(value);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;철수,&nbsp;영희,&nbsp;길동,&nbsp;강동</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>(index&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#c10aff">3</span>){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">break</span>;&nbsp;<span style="color:#999999">//&nbsp;반복&nbsp;중지.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4f;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+<script>
+/*{
+//for..in
+const names = ['철수', '영희', '길동', '강동', '미나', '다미'];
+
+for (let item in names){
+    console.log(item)
+    // 0, 1, 2, 3, 4, 5
+}
+}
+{
+//forEach
+const names = ['철수', '영희', '길동', '강동', '미나', '다미'];
+
+names.forEach(function (value, index) {
+    console.log(value);
+    // 철수, 영희, 길동, 강동, 미나, 다미
+    console.log(index);
+    // 0, 1, 2, 3, 4, 5
+})
+}*/
+{
+//for..of
+const names = ['철수', '영희', '길동', '강동', '미나', '다미'];
+
+for (let [index, value] of names.entries()){
+    console.log(index);
+    // 0, 1, 2, 3
+    console.log(value);
+    // 철수, 영희, 길동, 강동
+
+    if(index === 3){
+        break; // 반복 중지.
+    }
+}
+}
+</script>
+</div>
+
+</body>
+</html>
